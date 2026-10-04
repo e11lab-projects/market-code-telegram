@@ -62,7 +62,7 @@ UI = {
         "© E11 Lab · Educational content only. Not financial advice.",
         "© E11 Lab · មាតិកាអប់រំប៉ុណ្ណោះ មិនមែនជាដំបូន្មានហិរញ្ញវត្ថុទេ។",
     ),
-    "hero_title": ("Gold & Global Economy News", "ព័ត៌មានមាស និងសេដ្ឋកិច្ចពិភពលោក"),
+    "hero_title": ("Gold & Global Economic News", "ព័ត៌មានមាស និងសេដ្ឋកិច្ចពិភពលោក"),
     "hero_sub": (
         "Daily news that moves gold (XAU/USD), explained simply in English and Khmer.",
         "ព័ត៌មានប្រចាំថ្ងៃដែលជះឥទ្ធិពលដល់តម្លៃមាស (XAU/USD) ពន្យល់ងាយៗជាភាសាអង់គ្លេស និងខ្មែរ។",
