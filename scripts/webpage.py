@@ -128,6 +128,8 @@ h1{font-size:30px;line-height:1.3;margin:8px 0 18px}
 .card p{margin:0;color:var(--muted);font-size:14px}
 footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 18px}
 footer a{margin:0 8px}
+.brand{display:inline-flex;align-items:center;gap:8px}
+.logo{height:34px;width:auto}
 """
 
 LANG_JS = """
@@ -215,7 +217,7 @@ def page(title, body, root, desc="", image="", scripts=""):
     return (
         '<!doctype html><html lang="en" data-lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        f"<title>{esc(title)}</title>"
+        f'<link rel="icon" type="image/png" href="{root}favicon.png">'
         f'<meta name="description" content="{esc(desc)}">'
         f'<meta property="og:title" content="{esc(title)}">'
         f'<meta property="og:description" content="{esc(desc)}">'
