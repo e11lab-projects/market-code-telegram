@@ -479,4 +479,46 @@ def render_sitemap(articles):
 def load_articles(docs):
     try:
         with open(os.path.join(docs, "articles.json"), encoding="utf-8") as f:
-            retur
+            return json.load(f)
+    except Exception:
+        return []
+
+
+def save_articles(docs, articles):
+    with open(os.path.join(docs, "articles.json"), "w", encoding="utf-8") as f:
+        json.dump(articles[:200], f, ensure_ascii=False, indent=2)
+
+
+def write_file(docs, name, content):
+    with open(os.path.join(docs, name), "w", encoding="utf-8") as f:
+        f.write(content)
+
+def write_static(docs, articles):
+    os.makedirs(docs, exist_ok=True)
+    write_file(docs, "index.html", render_index(articles))
+    write_file(docs, "about.html", render_text_page("nav_about", ABOUT_EN, ABOUT_KM))
+    write_file(
+        docs, "disclaimer.html", render_text_page("nav_disclaimer", DISCLAIMER_EN, DISCLAIMER_KM)
+    )
+    write_file(docs, "privacy.html", render_text_page("nav_privacy", PRIVACY_EN, PRIVACY_KM))
+    write_file(
+        docs, "how-we-work.html", render_text_page("nav_editorial", EDITORIAL_EN, EDITORIAL_KM)
+    )
+    write_file(docs, "contact.html", render_contact_page())
+    write_file(docs, "calendar.html", render_calendar_page())
+    if SITE_URL:
+        write_file(docs, "sitemap.xml", render_sitemap(articles))
+        write_file(
+            docs, "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n"
+        )
+    open(os.path.join(docs, ".nojekyll"), "a").close()
+
+
+def write_site(docs, a, p_en, t_en, p_km, t_km, articles):
+    os.makedirs(os.path.join(docs, "news"), exist_ok=True)
+    write_file(
+        os.path.join(docs, "news"),
+        a["slug"] + ".html",
+        render_article(a, p_en, t_en, p_km, t_km),
+    )
+    write_static(docs, articles)
