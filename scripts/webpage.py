@@ -186,7 +186,8 @@ def header(root):
         f'<a class="brand" href="{root}index.html">E11 LAB <span>× THE MARKET CODE</span></a>'
         f"{nav}"
         '<div class="right">'
-        f'<a class="join" href="{CHANNEL_URL}" target="_blank" rel="noopener">{bi(*UI["join"])}</a>'
+        f'<a class="jo
+        f'<a class="brand" href="{root}index.html"><img class="logo" src="{root}logo.png" alt="E11 Lab"> E11 LAB <span>× THE MARKET CODE</span></a>'
         '<div class="lang"><button class="b-en" onclick="setLang(\'en\')">EN</button>'
         '<button class="b-km" onclick="setLang(\'km\')">ខ្មែរ</button></div>'
         "</div></div></header>"
