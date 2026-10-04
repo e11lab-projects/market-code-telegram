@@ -4,8 +4,19 @@ import json
 import html
 from urllib.parse import quote
 
+from widgets import TICKER_HTML, CALENDAR_HTML
+from ads import (
+    AD_BANNER,
+    AD_ARTICLE,
+    HEAD_EXTRA,
+    AFFILIATES,
+    CONTACT_EMAIL,
+    TELEGRAM_URL,
+)
+from pages_text import PRIVACY_EN, PRIVACY_KM, EDITORIAL_EN, EDITORIAL_KM
+
 SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
-CHANNEL_URL = "https://t.me/e11lab_marketnews"
+CHANNEL_URL = TELEGRAM_URL
 
 
 def esc(s):
@@ -29,15 +40,24 @@ def bi(en, km, tag="span", cls=""):
 
 UI = {
     "nav_news": ("News", "ព័ត៌មាន"),
+    "nav_calendar": ("Calendar", "ប្រតិទិនសេដ្ឋកិច្ច"),
     "nav_about": ("About", "អំពីយើង"),
     "nav_disclaimer": ("Disclaimer", "ការបដិសេធទំនួលខុសត្រូវ"),
-    "join": ("Join Telegram for Daily Alert", "ចូលរួម Telegram សម្រាប់សារជូនដំណឹងប្រចាំថ្ងៃ"),
+    "nav_privacy": ("Privacy Policy", "គោលការណ៍ឯកជនភាព"),
+    "nav_contact": ("Contact", "ទំនាក់ទំនង"),
+    "nav_editorial": ("How we work", "របៀបដែលយើងធ្វើការ"),
+    "join": ("Join Telegram", "ចូលរួម Telegram"),
     "all_news": ("← All news", "← ព័ត៌មានទាំងអស់"),
     "takeaways": ("Key takeaways", "ចំណុចសំខាន់ៗ"),
     "source": ("Source", "ប្រភព"),
     "impact": ("XAU/USD impact", "ផលប៉ះពាល់លើ XAU/USD"),
     "share": ("Share", "ចែករំលែក"),
     "all": ("All", "ទាំងអស់"),
+    "partners": ("Partner offers", "ការផ្តល់ជូនពីដៃគូ"),
+    "partners_note": (
+        "Sponsored links. We may earn a commission if you sign up, at no extra cost to you. This is not a recommendation. Trading carries a high risk of loss, so check that any provider is licensed where you live.",
+        "តំណឧបត្ថម្ភ។ យើងអាចទទួលបានកម្រៃជើងសារ ប្រសិនបើអ្នកចុះឈ្មោះ ដោយមិនមានការគិតថ្លៃបន្ថែមលើអ្នក។ នេះមិនមែនជាការណែនាំទេ។ ការជួញដូរមានហានិភ័យខ្ពស់នៃការបាត់បង់ ដូច្នេះសូមពិនិត្យថាអ្នកផ្តល់សេវាមានអាជ្ញាបណ្ណនៅកន្លែងដែលអ្នករស់នៅ។",
+    ),
     "footer": (
         "© E11 Lab · Educational content only. Not financial advice.",
         "© E11 Lab · មាតិកាអប់រំប៉ុណ្ណោះ មិនមែនជាដំបូន្មានហិរញ្ញវត្ថុទេ។",
@@ -92,8 +112,9 @@ html[data-lang="km"] .en{display:none}
 p.km,li.km{line-height:1.95}
 header{padding:12px 20px;border-bottom:1px solid var(--line)}
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.brand{font-weight:800;letter-spacing:.12em;font-size:14px;color:var(--text)}
+.brand{font-weight:800;letter-spacing:.12em;font-size:14px;color:var(--text);display:inline-flex;align-items:center;gap:8px}
 .brand span{color:var(--green)}
+.logo{height:34px;width:auto}
 nav{display:flex;gap:16px;font-size:14px;flex-wrap:wrap}
 nav a{color:var(--text)}
 .right{display:flex;align-items:center;gap:10px}
@@ -101,6 +122,7 @@ nav a{color:var(--text)}
 .join:hover{text-decoration:none;opacity:.9}
 .lang button{background:transparent;color:var(--text);border:1px solid var(--line);padding:5px 12px;border-radius:8px;cursor:pointer;font-size:14px;font-family:inherit}
 html[data-lang="en"] .b-en,html[data-lang="km"] .b-km{background:var(--cyan);color:#06222a;border-color:var(--cyan)}
+.tickerbar{border-bottom:1px solid var(--line);min-height:46px}
 main{max-width:920px;margin:0 auto;padding:26px 18px 60px}
 h1{font-size:30px;line-height:1.3;margin:8px 0 18px}
 .hero{padding:6px 0}
@@ -117,8 +139,11 @@ h1{font-size:30px;line-height:1.3;margin:8px 0 18px}
 .lead{font-size:19px;color:#cfe9ee;border-left:3px solid var(--green);padding-left:14px}
 .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 20px 10px;margin:26px 0}
 .box h3{color:var(--green);margin:14px 0 6px}
+.partners li{margin-bottom:8px}
 .note{color:var(--muted);font-size:13px}
 .share{color:var(--muted);font-size:14px}
+.ad{margin:18px 0;text-align:center}
+.adlabel{display:block;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--text)}
 .card:hover{border-color:var(--cyan);text-decoration:none}
@@ -128,8 +153,6 @@ h1{font-size:30px;line-height:1.3;margin:8px 0 18px}
 .card p{margin:0;color:var(--muted);font-size:14px}
 footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 18px}
 footer a{margin:0 8px}
-.brand{display:inline-flex;align-items:center;gap:8px}
-.logo{height:34px;width:auto}
 """
 
 LANG_JS = """
@@ -175,21 +198,49 @@ function setImp(v,btn){
 """
 
 
+def ad_slot(code):
+    if not code.strip():
+        return ""
+    return (
+        '<div class="ad"><span class="adlabel">'
+        + bi("Advertisement", "ការផ្សាយពាណិជ្ជកម្ម")
+        + "</span>"
+        + code
+        + "</div>"
+    )
+
+
+def affiliate_block():
+    if not AFFILIATES:
+        return ""
+    rows = ""
+    for p in AFFILIATES:
+        rows += (
+            f'<li><a href="{esc(p["url"])}" target="_blank" rel="sponsored nofollow noopener">'
+            f'<b>{esc(p["name"])}</b></a> — {bi(p.get("en", ""), p.get("km", ""))}</li>'
+        )
+    return (
+        '<div class="box partners">'
+        f'<h3>{bi(*UI["partners"])}</h3>'
+        f'{bi(*UI["partners_note"], "p", "note")}'
+        f"<ul>{rows}</ul></div>"
+    )
+
+
 def header(root):
     nav = (
         "<nav>"
         f'<a href="{root}index.html">{bi(*UI["nav_news"])}</a>'
+        f'<a href="{root}calendar.html">{bi(*UI["nav_calendar"])}</a>'
         f'<a href="{root}about.html">{bi(*UI["nav_about"])}</a>'
-        f'<a href="{root}disclaimer.html">{bi(*UI["nav_disclaimer"])}</a>'
         "</nav>"
     )
     return (
         '<header><div class="top">'
-        f'<a class="brand" href="{root}index.html">E11 LAB <span>× THE MARKET CODE</span></a>'
+        f'<a class="brand" href="{root}index.html"><img class="logo" src="{root}logo.png" alt="E11 Lab"> E11 LAB <span>× THE MARKET CODE</span></a>'
         f"{nav}"
         '<div class="right">'
-        f'<a class="jo
-        f'<a class="brand" href="{root}index.html"><img class="logo" src="{root}logo.png" alt="E11 Lab"> E11 LAB <span>× THE MARKET CODE</span></a>'
+        f'<a class="join" href="{CHANNEL_URL}" target="_blank" rel="noopener">{bi(*UI["join"])}</a>'
         '<div class="lang"><button class="b-en" onclick="setLang(\'en\')">EN</button>'
         '<button class="b-km" onclick="setLang(\'km\')">ខ្មែរ</button></div>'
         "</div></div></header>"
@@ -197,38 +248,41 @@ def header(root):
 
 
 def footer(root):
-    return (
-        "<footer>"
-        f'<p><a href="{root}about.html">{bi(*UI["nav_about"])}</a>'
+    links = (
+        f'<a href="{root}about.html">{bi(*UI["nav_about"])}</a>'
+        f'<a href="{root}how-we-work.html">{bi(*UI["nav_editorial"])}</a>'
+        f'<a href="{root}privacy.html">{bi(*UI["nav_privacy"])}</a>'
         f'<a href="{root}disclaimer.html">{bi(*UI["nav_disclaimer"])}</a>'
-        f'<a href="{CHANNEL_URL}" target="_blank" rel="noopener">Telegram</a></p>'
-        f'<p>{bi(*UI["footer"])}</p>'
-        "</footer>"
+        f'<a href="{root}contact.html">{bi(*UI["nav_contact"])}</a>'
+        f'<a href="{CHANNEL_URL}" target="_blank" rel="noopener">Telegram</a>'
     )
+    return f"<footer><p>{links}</p><p>{bi(*UI['footer'])}</p></footer>"
 
 
-def page(title, body, root, desc="", image="", scripts=""):
+def page(title, body, root, desc="", image="", scripts="", ads=False):
     og = ""
     if image:
         og = (
             f'<meta property="og:image" content="{esc(image)}">'
             '<meta name="twitter:card" content="summary_large_image">'
         )
+    top_ad = ad_slot(AD_BANNER) if ads else ""
     return (
         '<!doctype html><html lang="en" data-lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
+        f"<title>{esc(title)}</title>"
         f'<link rel="icon" type="image/png" href="{root}favicon.png">'
         f'<meta name="description" content="{esc(desc)}">'
         f'<meta property="og:title" content="{esc(title)}">'
         f'<meta property="og:description" content="{esc(desc)}">'
-        f"{og}"
+        f"{og}{HEAD_EXTRA}"
         '<link rel="preconnect" href="https://fonts.googleapis.com">'
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
         '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">'
         f"<script>{LANG_JS}</script>"
         f"<style>{CSS}</style></head><body>"
-        f"{header(root)}"
-        f"<main>{body}</main>"
+        f"{header(root)}{TICKER_HTML}"
+        f"<main>{top_ad}{body}</main>"
         f"{footer(root)}"
         f"<script>{scripts}</script>"
         "</body></html>"
@@ -286,13 +340,15 @@ def render_article(a, p_en, t_en, p_km, t_km):
         f'{bi(a["teaser"], a.get("teaser_km", ""), "p", "lead")}'
         f"{paras}"
         f'<div class="box"><h3>{bi(*UI["takeaways"])}</h3><ul>{lis}</ul></div>'
+        f"{ad_slot(AD_ARTICLE)}"
+        f"{affiliate_block()}"
         f"{share}"
         f"{note}"
         f'<p><a href="../index.html">{bi(*UI["all_news"])}</a></p>'
         "</article>"
     )
     image = f'{SITE_URL}/news/{a["slug"]}.jpg' if SITE_URL else ""
-    return page(a["headline"] + " | E11 Lab", body, "../", a["teaser"], image)
+    return page(a["headline"] + " | E11 Lab", body, "../", a["teaser"], image, ads=True)
 
 
 def card_text(a):
@@ -344,6 +400,7 @@ def render_index(articles):
         "Daily news that moves gold (XAU/USD), in English and Khmer.",
         "",
         FILTER_JS,
+        ads=True,
     )
 
 
@@ -355,11 +412,53 @@ def render_text_page(title_key, paras_en, paras_km):
     return page(UI[title_key][0] + " | E11 Lab", body, "", paras_en[0])
 
 
+def render_contact_page():
+    email = ""
+    if CONTACT_EMAIL.strip():
+        email = (
+            f'<p>Email: <a href="mailto:{esc(CONTACT_EMAIL)}">{esc(CONTACT_EMAIL)}</a></p>'
+        )
+    body = (
+        f'<h1>{bi(*UI["nav_contact"])}</h1>'
+        + bi(
+            "Questions, corrections or partnership enquiries are welcome.",
+            "សំណួរ ការកែតម្រូវ ឬសំណើសហការ សូមស្វាគមន៍។",
+            "p",
+        )
+        + f'<p>Telegram: <a href="{esc(TELEGRAM_URL)}" target="_blank" rel="noopener">{esc(TELEGRAM_URL)}</a></p>'
+        + email
+        + bi(
+            "We aim to reply within a few days.",
+            "យើងព្យាយាមឆ្លើយតបក្នុងរយៈពេលពីរបីថ្ងៃ។",
+            "p",
+        )
+    )
+    return page("Contact | E11 Lab", body, "", "Contact E11 Lab × THE MARKET CODE.")
+
+
+def render_calendar_page():
+    body = (
+        f'<h1>{bi("Economic Calendar", "ប្រតិទិនសេដ្ឋកិច្ច")}</h1>'
+        + bi(
+            "Upcoming economic events that can move gold. For education only.",
+            "ព្រឹត្តិការណ៍សេដ្ឋកិច្ចដែលនឹងមកដល់ ដែលអាចជះឥទ្ធិពលដល់តម្លៃមាស។ សម្រាប់ការអប់រំប៉ុណ្ណោះ។",
+            "p",
+            "lead",
+        )
+        + CALENDAR_HTML
+    )
+    return page("Economic Calendar | E11 Lab", body, "", "Economic calendar for gold traders.")
+
+
 def render_sitemap(articles):
     items = [
         (SITE_URL + "/", ""),
+        (SITE_URL + "/calendar.html", ""),
         (SITE_URL + "/about.html", ""),
+        (SITE_URL + "/how-we-work.html", ""),
+        (SITE_URL + "/privacy.html", ""),
         (SITE_URL + "/disclaimer.html", ""),
+        (SITE_URL + "/contact.html", ""),
     ]
     for a in articles:
         items.append((f'{SITE_URL}/news/{a["slug"]}.html', a["date"]))
@@ -380,34 +479,4 @@ def render_sitemap(articles):
 def load_articles(docs):
     try:
         with open(os.path.join(docs, "articles.json"), encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return []
-
-
-def save_articles(docs, articles):
-    with open(os.path.join(docs, "articles.json"), "w", encoding="utf-8") as f:
-        json.dump(articles[:200], f, ensure_ascii=False, indent=2)
-
-
-def write_static(docs, articles):
-    os.makedirs(docs, exist_ok=True)
-    with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
-        f.write(render_index(articles))
-    with open(os.path.join(docs, "about.html"), "w", encoding="utf-8") as f:
-        f.write(render_text_page("nav_about", ABOUT_EN, ABOUT_KM))
-    with open(os.path.join(docs, "disclaimer.html"), "w", encoding="utf-8") as f:
-        f.write(render_text_page("nav_disclaimer", DISCLAIMER_EN, DISCLAIMER_KM))
-    if SITE_URL:
-        with open(os.path.join(docs, "sitemap.xml"), "w", encoding="utf-8") as f:
-            f.write(render_sitemap(articles))
-        with open(os.path.join(docs, "robots.txt"), "w", encoding="utf-8") as f:
-            f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
-    open(os.path.join(docs, ".nojekyll"), "a").close()
-
-
-def write_site(docs, a, p_en, t_en, p_km, t_km, articles):
-    os.makedirs(os.path.join(docs, "news"), exist_ok=True)
-    with open(os.path.join(docs, "news", a["slug"] + ".html"), "w", encoding="utf-8") as f:
-        f.write(render_article(a, p_en, t_en, p_km, t_km))
-    write_static(docs, articles)
+            retur
