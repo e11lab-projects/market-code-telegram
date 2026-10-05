@@ -1,56 +1,23 @@
 import os
-import re
 import json
-import html
-import time
-import calendar
 import datetime
-import requests
-import feedparser
+from io import BytesIO
+
+from PIL import Image
+
+from feeds import get_items
+from gemini_client import call_gemini
 from image_gen import generate_image
 import webpage
 
-FEEDS = [
-    # Official sources
-    "https://www.federalreserve.gov/feeds/press_monetary.xml",
-    "https://www.federalreserve.gov/feeds/press_all.xml",
-    "https://www.federalreserve.gov/feeds/speeches.xml",
-    "https://www.bls.gov/feed/bls_latest.rss",
-    "https://www.ecb.europa.eu/rss/press.html",
-    # Markets and economy
-    "http://feeds.bbci.co.uk/news/business/rss.xml",
-    "https://www.cnbc.com/id/10000664/device/rss/rss.html",
-    "https://www.cnbc.com/id/20910258/device/rss/rss.html",
-    "https://feeds.content.dowjones.io/public/rss/mw_topstories",
-    "https://feeds.content.dowjones.io/public/rss/mw_marketpulse",
-    "https://finance.yahoo.com/news/rssindex",
-    "https://feeds.finance.yahoo.com/rss/2.0/headline?s=GC=F&region=US&lang=en-US",
-]
-MODELS = [
-    os.environ.get("GEMINI_MODEL", "gemini-3.8-flash"),
-    "gemini-3.7-flash",
-    "gemini-3.5-flash-lite",
-]
 LANG = os.environ.get("POST_LANGUAGE", "English")
-MIN_IMPACT = int(os.environ.get("MIN_IMPACT", "6"))
-MAX_POSTS = int(os.environ.get("MAX_POSTS_PER_DAY", "8"))
-MAX_AGE_HOURS = 36
-USER_AGENT = "Mozilla/5.0 (compatible; MarketCodeBot/1.0)"
+ALERT_MIN = int(os.environ.get("ALERT_MIN_IMPACT", "6"))
+SITE_MIN = int(os.environ.get("SITE_MIN_IMPACT", "3"))
+STORIES_PER_RUN = int(os.environ.get("STORIES_PER_RUN", "2"))
+MAX_SITE_PER_DAY = int(os.environ.get("MAX_SITE_PER_DAY", "20"))
+MAX_ALERTS_PER_DAY = int(os.environ.get("MAX_ALERTS_PER_DAY", "8"))
 HISTORY_FILE = "history.json"
 DOCS = "../docs"
-
-KEYWORDS = {
-    "gold": 5, "xau": 5, "bullion": 4, "safe haven": 3, "safe-haven": 3,
-    "fed": 3, "fomc": 4, "powell": 3, "federal reserve": 3,
-    "rate cut": 3, "rate hike": 3, "interest rate": 2, "monetary policy": 2,
-    "inflation": 3, "cpi": 4, "pce": 4, "ppi": 3,
-    "payroll": 4, "nonfarm": 4, "jobs report": 4, "unemployment": 2, "jobless": 2,
-    "treasury": 2, "yield": 2, "dollar": 2, "dxy": 3,
-    "central bank": 2, "ecb": 2, "boj": 2, "pboc": 3, "bank of england": 2,
-    "tariff": 2, "sanction": 2, "war": 2, "ceasefire": 2, "iran": 2,
-    "hormuz": 3, "israel": 1, "ukraine": 1, "russia": 1, "china": 1,
-    "oil": 1, "recession": 2, "gdp": 2, "debt ceiling": 2, "shutdown": 2,
-}
 
 KHMER_RULES = (
     "Also write a Khmer version for readers in Cambodia: headline_km, teaser_km, "
@@ -62,13 +29,10 @@ KHMER_RULES = (
     "Khmer numerals. Use these Khmer terms: gold = មាស; inflation = អតិផរណា; "
     "interest rate = អត្រាការប្រាក់; central bank = ធនាគារកណ្តាល; US dollar = "
     "ដុល្លារអាមេរិក; market = ទីផ្សារ; traders = អ្នកជួញដូរ. For other technical "
-    "terms you are not sure about, keep the English term in Latin letters.\n"
+    "terms you are not sure about, keep the English term in Latin letters. "
+    "Use ONLY Khmer script, plus Latin letters for names and abbreviations. "
+    "Never use Thai, Vietnamese, Chinese or any other script.\n"
 )
-
-
-def clean(text):
-    text = re.sub(r"<[^>]+>", " ", text or "")
-    return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
 def as_list(v):
@@ -81,11 +45,12 @@ def text_of(v):
     return str(v or "").strip()
 
 
-def set_output(posted):
+def set_output(posted, alert):
     path = os.environ.get("GITHUB_OUTPUT")
     if path:
         with open(path, "a", encoding="utf-8") as f:
             f.write(f"posted={'true' if posted else 'false'}\n")
+            f.write(f"alert={'true' if alert else 'false'}\n")
 
 
 def load_history():
@@ -99,111 +64,49 @@ def load_history():
 def save_history(history, entry):
     history.append(entry)
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(history[-80:], f, ensure_ascii=False, indent=2)
+        json.dump(history[-120:], f, ensure_ascii=False, indent=2)
 
 
-def score(text):
-    t = text.lower()
-    total = 0
-    for word, weight in KEYWORDS.items():
-        if re.search(r"\b" + re.escape(word) + r"s?\b", t):
-            total += weight
-    return total
+def compress(data):
+    try:
+        im = Image.open(BytesIO(data)).convert("RGB")
+        im.thumbnail((1024, 1024))
+        out = BytesIO()
+        im.save(out, "JPEG", quality=82, optimize=True)
+        return out.getvalue()
+    except Exception:
+        return data
 
 
-def is_fresh(entry):
-    t = entry.get("published_parsed") or entry.get("updated_parsed")
-    if not t:
-        return True
-    return (time.time() - calendar.timegm(t)) < MAX_AGE_HOURS * 3600
-
-
-def get_items(history):
-    posted = {h.get("link") for h in history if h.get("link")}
-    items = []
-    seen = set()
-    for url in FEEDS:
-        try:
-            feed = feedparser.parse(url, agent=USER_AGENT)
-        except Exception as e:
-            print(f"{url} -> failed: {e}")
-            continue
-        print(f"{url} -> {len(feed.entries)} items")
-        source = clean(feed.feed.get("title", "")) or url.split("/")[2]
-        for e in feed.entries[:15]:
-            title = clean(e.get("title"))
-            link = e.get("link", "")
-            if not title or title.lower() in seen or link in posted or not is_fresh(e):
-                continue
-            seen.add(title.lower())
-            summary = clean(e.get("summary"))[:500]
-            items.append(
-                {
-                    "title": title,
-                    "summary": summary,
-                    "link": link,
-                    "source": source,
-                    "score": score(title + " " + summary),
-                }
-            )
-    items = [i for i in items if i["score"] > 0]
-    items.sort(key=lambda i: i["score"], reverse=True)
-    return items[:25]
-
-
-def call_gemini(key, prompt):
-    body = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"responseMimeType": "application/json"},
-    }
-    headers = {"x-goog-api-key": key, "Content-Type": "application/json"}
-    last = "no attempt made"
-    for model in MODELS:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-        for attempt in range(1, 4):
-            try:
-                r = requests.post(url, headers=headers, json=body, timeout=180)
-            except requests.RequestException as e:
-                last = f"{model}: {e}"
-                print(f"Gemini network error ({model}, try {attempt}):", e)
-                time.sleep(10 * attempt)
-                continue
-            if r.status_code == 200:
-                print("Gemini model used:", model)
-                return r.json()
-            last = f"{model}: {r.status_code}"
-            print(f"Gemini error ({model}, try {attempt}):", r.status_code, r.text[:300])
-            if r.status_code in (400, 403, 404):
-                break
-            time.sleep(15 * attempt)
-    raise RuntimeError("All Gemini models failed. Last: " + last)
-
-
-def ask_gemini(items, history):
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not key:
-        raise RuntimeError("GEMINI_API_KEY secret is empty or missing")
-
+def build_prompt(items, history):
     recent = "\n".join(
-        f"- {h['headline']} | image: {h['image_subject']}" for h in history[-12:]
+        f"- {h['headline']} | image: {h['image_subject']}" for h in history[-14:]
     ) or "- (none yet)"
     listing = "\n".join(
         f"[{i}] (relevance {it['score']}) {it['title']} -- {it['summary']} ({it['source']})"
         for i, it in enumerate(items)
     )
-    prompt = (
-        "You are the editor of THE MARKET CODE by E11 Lab. Your audience is "
-        "gold traders who trade XAU/USD. Your job is to make them better "
-        "informed, not to give signals.\n"
+    return (
+        "You are the editor of THE MARKET CODE by E11 Lab, writing for gold "
+        "(XAU/USD) traders. The website covers ALL news that can affect gold, "
+        "including currencies and the wider economy. Telegram alerts are only "
+        "for the biggest stories, so score honestly.\n"
         "Below are fresh news items from public feeds, each with an index, a "
         "keyword relevance score, a title and a short summary.\n"
-        "Pick the ONE item with the biggest likely impact on gold (XAU/USD) "
-        "right now. Strong drivers are: US economic data and Fed policy, "
-        "inflation, the US dollar and Treasury yields, other central bank policy "
-        "and central bank gold buying, geopolitical or safe-haven events, and "
-        "gold-specific news. Ignore items with little link to gold. It must NOT "
-        "be similar to the recently posted ones. If nothing matters for gold, "
-        "set impact_score to 1.\n"
+        "Pick the ONE item with the biggest likely effect on gold (XAU/USD). "
+        "Relevant topics: US data and Fed policy; inflation; the US dollar and "
+        "major currencies (EUR, JPY, GBP, CNY and others) and exchange rates; "
+        "Treasury and global bond yields; other central banks' policy and gold "
+        "buying; oil and commodities; trade and tariffs; stock market stress; "
+        "geopolitical or safe-haven events; gold-specific news. It must NOT be "
+        "similar to the recently posted ones.\n"
+        "impact_score guide (1 to 10): 8-10 = market-moving right now (Fed "
+        "decisions, big CPI or jobs surprises, major geopolitical escalation, big "
+        "gold-specific news); 5-7 = clearly relevant for gold today; 3-4 = useful "
+        "background (non-US data, central bank speeches, currency moves with a "
+        "modest link to gold); 1-2 = little or no link to gold. If an item has no "
+        "concrete event or figure (it only says data was released), score it 4 "
+        "or lower.\n"
         "Write ORIGINAL commentary in " + LANG + ". Use ONLY facts found in the "
         "chosen item's title and summary. Do not invent numbers, quotes, dates, "
         "events or price levels. Never copy sentences from the source.\n"
@@ -225,24 +128,37 @@ def ask_gemini(items, history):
         "headline_km, teaser_km, article_km, takeaways_km: the Khmer versions;\n"
         "gold_impact: one of bullish, bearish, mixed, neutral (the likely effect "
         "on gold);\n"
-        "impact_score: integer from 1 to 10 (how strongly this is likely to "
-        "move gold);\n"
+        "impact_score: integer from 1 to 10;\n"
         "image_subject: ONE scene description in English (max 35 words) for a "
         "collage illustration with these elements: plain gold bars with blank "
         "unmarked surfaces, the main subject of the story (for example the "
-        "Federal Reserve building, a country map, an oil rig, dollar banknotes, "
-        "a factory), and ONE arrow showing the likely effect on gold: pointing "
-        "up if bullish, down if bearish, sideways if mixed or neutral. Do not "
-        "mention colours. Make the main subject look clearly different from the "
-        "recent images listed below. No text, numbers or people;\n"
+        "Federal Reserve building, a country map, coins or banknotes of the "
+        "currencies involved, an oil rig, a factory), and ONE arrow showing the "
+        "likely effect on gold: pointing up if bullish, down if bearish, "
+        "sideways if mixed or neutral. Do not mention colours. Make the main "
+        "subject look clearly different from the recent images listed below. No "
+        "text, numbers or people;\n"
         "source_index: the integer index of the chosen item.\n\n"
         "RECENTLY POSTED (avoid repeating):\n" + recent + "\n\n"
         "FRESH ITEMS:\n" + listing
     )
-    data = call_gemini(key, prompt)
+
+
+def ask_gemini(items, history):
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("GEMINI_API_KEY secret is empty or missing")
+    data = call_gemini(key, build_prompt(items, history))
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     text = text.replace("```json", "").replace("```", "").strip()
     return json.loads(text)
+
+
+def make_image(scene, impact):
+    try:
+        return generate_image(scene, impact)
+    except TypeError:
+        return generate_image(scene)
 
 
 def main():
@@ -251,104 +167,123 @@ def main():
 
     history = load_history()
     today = datetime.date.today().isoformat()
-
-    posts_today = sum(1 for h in history if h.get("date") == today)
-    if posts_today >= MAX_POSTS:
-        print(f"Daily limit reached ({posts_today}/{MAX_POSTS}). Skipping.")
-        set_output(False)
+    site_today = sum(1 for h in history if h.get("date") == today)
+    alerts_today = sum(
+        1 for h in history if h.get("date") == today and h.get("alert")
+    )
+    if site_today >= MAX_SITE_PER_DAY:
+        print(f"Daily site limit reached ({site_today}/{MAX_SITE_PER_DAY}). Skipping.")
+        set_output(False, False)
         return
 
     items = get_items(history)
     if not items:
-        print("No fresh gold-relevant items found. Skipping.")
-        set_output(False)
+        print("No fresh relevant items found. Skipping.")
+        set_output(False, False)
         return
 
-    post = ask_gemini(items, history)
-
-    try:
-        impact_score = int(post.get("impact_score", 0))
-    except Exception:
-        impact_score = 0
-    if impact_score < MIN_IMPACT:
-        print(
-            f"Skipped: impact score {impact_score} is below {MIN_IMPACT} "
-            f"({post.get('headline')})"
-        )
-        set_output(False)
-        return
-
-    try:
-        idx = int(post.get("source_index", 0))
-    except Exception:
-        idx = 0
-    if not 0 <= idx < len(items):
-        idx = 0
-    src = items[idx]
-
-    impact = text_of(post.get("gold_impact", "mixed")).lower()
-    if impact not in ("bullish", "bearish", "mixed", "neutral"):
-        impact = "mixed"
-
-    print("Gemini chose:", post["headline"], "| source:", src["source"])
-    print("Gold impact:", impact, "| score:", impact_score)
-    print("Khmer headline:", text_of(post.get("headline_km")) or "(missing)")
-    print("Scene:", post["image_subject"])
-
-    img, provider = generate_image(post["image_subject"])
-
-    slug = f"{today}-{webpage.slugify(post['headline'])}"
-    os.makedirs(os.path.join(DOCS, "news"), exist_ok=True)
-    with open(os.path.join(DOCS, "news", slug + ".jpg"), "wb") as f:
-        f.write(img)
-
-    article = {
-        "slug": slug,
-        "date": today,
-        "headline": text_of(post["headline"]),
-        "teaser": text_of(post["teaser"]),
-        "headline_km": text_of(post.get("headline_km")),
-        "teaser_km": text_of(post.get("teaser_km")),
-        "impact": impact,
-        "source_name": src["source"],
-        "source_url": src["link"] or "#",
-    }
     articles = webpage.load_articles(DOCS)
-    articles.insert(0, article)
-    webpage.save_articles(DOCS, articles)
-    webpage.write_site(
-        DOCS,
-        article,
-        as_list(post["article"]),
-        as_list(post["takeaways"]),
-        as_list(post.get("article_km")),
-        as_list(post.get("takeaways_km")),
-        articles,
-    )
+    alerts = []
+    published = 0
+    used = set()
 
-    last = {
-        "headline": article["headline"],
-        "teaser": article["teaser"],
-        "headline_km": article["headline_km"],
-        "teaser_km": article["teaser_km"],
-        "impact": impact,
-        "url": f"{webpage.SITE_URL}/news/{slug}.html",
-        "image_path": f"{DOCS}/news/{slug}.jpg",
-    }
-    with open("last_post.json", "w", encoding="utf-8") as f:
-        json.dump(last, f, ensure_ascii=False, indent=2)
+    for _ in range(STORIES_PER_RUN):
+        if site_today + published >= MAX_SITE_PER_DAY:
+            break
+        pool = [i for i in items if i["link"] not in used]
+        if not pool:
+            break
 
-    save_history(
-        history,
-        {
+        post = ask_gemini(pool, history)
+        try:
+            score = int(post.get("impact_score", 0))
+        except Exception:
+            score = 0
+        if score < SITE_MIN:
+            print(f"Stopped: best remaining story scored {score} (below {SITE_MIN}).")
+            break
+
+        try:
+            idx = int(post.get("source_index", 0))
+        except Exception:
+            idx = 0
+        if not 0 <= idx < len(pool):
+            idx = 0
+        src = pool[idx]
+        used.add(src["link"])
+
+        impact = text_of(post.get("gold_impact", "mixed")).lower()
+        if impact not in ("bullish", "bearish", "mixed", "neutral"):
+            impact = "mixed"
+
+        is_alert = score >= ALERT_MIN and alerts_today + len(alerts) < MAX_ALERTS_PER_DAY
+        print("Story:", post["headline"], "| score:", score, "| impact:", impact,
+              "| alert:", is_alert)
+        print("Khmer headline:", text_of(post.get("headline_km")) or "(missing)")
+
+        img, provider = make_image(post["image_subject"], impact)
+        img = compress(img)
+
+        slug = f"{today}-{webpage.slugify(post['headline'])}"
+        os.makedirs(os.path.join(DOCS, "news"), exist_ok=True)
+        with open(os.path.join(DOCS, "news", slug + ".jpg"), "wb") as f:
+            f.write(img)
+
+        article = {
+            "slug": slug,
             "date": today,
-            "headline": article["headline"],
-            "image_subject": post["image_subject"],
-            "link": src["link"],
-        },
-    )
-    set_output(True)
-    print(f"Article built (image via {provider}):", last["url"])
+            "headline": text_of(post["headline"]),
+            "teaser": text_of(post["teaser"]),
+            "headline_km": text_of(post.get("headline_km")),
+            "teaser_km": text_of(post.get("teaser_km")),
+            "impact": impact,
+            "source_name": src["source"],
+            "source_url": src["link"] or "#",
+        }
+        articles.insert(0, article)
+        webpage.save_articles(DOCS, articles)
+        webpage.write_site(
+            DOCS,
+            article,
+            as_list(post["article"]),
+            as_list(post["takeaways"]),
+            as_list(post.get("article_km")),
+            as_list(post.get("takeaways_km")),
+            articles,
+        )
+
+        if is_alert:
+            alerts.append(
+                {
+                    "headline": article["headline"],
+                    "teaser": article["teaser"],
+                    "headline_km": article["headline_km"],
+                    "teaser_km": article["teaser_km"],
+                    "impact": impact,
+                    "url": f"{webpage.SITE_URL}/news/{slug}.html",
+                    "image_path": f"{DOCS}/news/{slug}.jpg",
+                }
+            )
+
+        save_history(
+            history,
+            {
+                "date": today,
+                "headline": article["headline"],
+                "image_subject": post["image_subject"],
+                "link": src["link"],
+                "alert": is_alert,
+            },
+        )
+        published += 1
+        print(f"Published (image via {provider}):", slug)
+
+    if alerts:
+        with open("last_post.json", "w", encoding="utf-8") as f:
+            json.dump(alerts, f, ensure_ascii=False, indent=2)
+
+    set_output(published > 0, bool(alerts))
+    print(f"Done: {published} stories on the site, {len(alerts)} Telegram alerts.")
 
 
 main()
