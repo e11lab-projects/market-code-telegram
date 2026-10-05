@@ -11,10 +11,14 @@ on:
           - calendar
         default: news
   schedule:
-    - cron: "7 0-16/2 * * 1-5"
-    - cron: "47 12 * * 1-5"
-    - cron: "47 13 * * 1-5"
-    - cron: "30 0 * * 1-5"
+    - cron: "7 7-23/2 * * 1-5"
+      timezone: "Asia/Phnom_Penh"
+    - cron: "47 19 * * 1-5"
+      timezone: "Asia/Phnom_Penh"
+    - cron: "47 20 * * 1-5"
+      timezone: "Asia/Phnom_Penh"
+    - cron: "30 7 * * 1-5"
+      timezone: "Asia/Phnom_Penh"
 
 permissions:
   contents: write
@@ -30,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       posted: ${{ steps.gen.outputs.posted }}
+      alert: ${{ steps.gen.outputs.alert || steps.gen.outputs.posted }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,20 +46,26 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Set site address
+        env:
+          CUSTOM_URL: ${{ vars.SITE_URL }}
         run: |
-          OWNER="${GITHUB_REPOSITORY_OWNER,,}"
-          REPO="${GITHUB_REPOSITORY#*/}"
-          echo "SITE_URL=https://${OWNER}.github.io/${REPO}" >> "$GITHUB_ENV"
+          if [ -n "$CUSTOM_URL" ]; then
+            echo "SITE_URL=${CUSTOM_URL%/}" >> "$GITHUB_ENV"
+          else
+            OWNER="${GITHUB_REPOSITORY_OWNER,,}"
+            REPO="${GITHUB_REPOSITORY#*/}"
+            echo "SITE_URL=https://${OWNER}.github.io/${REPO}" >> "$GITHUB_ENV"
+          fi
 
       - name: Choose what to run
         run: |
           SCRIPT="news_post.py"
-          if [ "${{ github.event.schedule }}" = "30 0 * * 1-5" ] || [ "${{ github.event.inputs.mode }}" = "calendar" ]; then
+          if [ "${{ github.event.schedule }}" = "30 7 * * 1-5" ] || [ "${{ github.event.inputs.mode }}" = "calendar" ]; then
             SCRIPT="calendar_post.py"
           fi
           echo "SCRIPT=$SCRIPT" >> "$GITHUB_ENV"
 
-      - name: Write article and image
+      - name: Write articles and images
         id: gen
         working-directory: scripts
         env:
@@ -62,10 +73,13 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           POST_LANGUAGE: English
-          MIN_IMPACT: "6"
-          MAX_POSTS_PER_DAY: "8"
-          CAL_IMPACTS: "High,Medium"
-          CAL_WINDOW_HOURS: "72"
+          ALERT_MIN_IMPACT: "6"
+          SITE_MIN_IMPACT: "3"
+          STORIES_PER_RUN: "2"
+          MAX_SITE_PER_DAY: "20"
+          MAX_ALERTS_PER_DAY: "8"
+          CAL_IMPACTS: "High"
+          CAL_WINDOW_HOURS: "24"
         run: python "$SCRIPT"
 
       - name: Save to repository
@@ -74,7 +88,7 @@ jobs:
           git config user.name "market-code-bot"
           git config user.email "bot@users.noreply.github.com"
           git add docs scripts/history.json scripts/last_post.json
-          git diff --staged --quiet || git commit -m "New article"
+          git diff --staged --quiet || git commit -m "New articles"
           git pull --rebase
           git push
 
@@ -96,7 +110,7 @@ jobs:
 
   telegram:
     needs: [build, deploy]
-    if: needs.build.outputs.posted == 'true'
+    if: needs.build.outputs.alert == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
