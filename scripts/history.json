@@ -123,5 +123,19 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States financial bond market building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/options/articles/wall-street-strategists-steer-investors-140000412.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-05",
+    "headline": "Spot Gold Rises as October Fed Rate Hike Odds Wane",
+    "image_subject": "Plain gold bars with blank unmarked surfaces beside a stylized monetary policy percentage symbol sculpture, and a single upward-pointing arrow representing rising market value.",
+    "link": "https://qz.com/gold-prices-rise-september-jobs-report-fed-rate-hike-100526?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-10-05",
+    "headline": "Nasdaq Hits Highs as Wall Street Splits and Yields Creep",
+    "image_subject": "A collage illustration featuring plain gold bars with blank unmarked surfaces, the Nasdaq stock exchange building facade, and a single upward-pointing arrow representing rising market value.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-hits-fresh-highs-while-182800216.html?.tsrc=rss",
+    "alert": false
   }
 ]
