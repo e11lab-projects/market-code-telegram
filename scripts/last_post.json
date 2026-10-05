@@ -1,9 +1,11 @@
-{
-  "headline": "Gold Edges Higher as Labor Slowdown Offsets Elevated Yields",
-  "teaser": "Gold edged higher on Monday following its sharpest weekly decline since June. Slower U.S. labor momentum eased Federal Reserve rate hike bets, but elevated Treasury yields and oil prices limited gains.",
-  "headline_km": "មាសឡើងថ្លៃបន្តិច ខណៈទីផ្សារការងារថយចុះទប់ទល់នឹងទិន្នផលសញ្ញាបណ្ណខ្ពស់",
-  "teaser_km": "តម្លៃមាសបានកើនឡើងបន្តិចកាលពីថ្ងៃចន្ទ បន្ទាប់ពីការធ្លាក់ចុះប្រចាំសប្តាហ៍ខ្លាំងបំផុតចាប់តាំងពីខែមិថុនា។ ការថយចុះកម្តៅនៃទីផ្សារការងារសហរដ្ឋអាមេរិកបានកាត់បន្ថយការរំពឹងទុកលើការដំឡើងអត្រាការប្រាក់ Fed ប៉ុន្តែទិន្នផលសញ្ញាបណ្ណខ្ពស់បានដាក់សម្ពាធលើការងើបឡើងនេះ។",
-  "impact": "mixed",
-  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-05-gold-edges-higher-as-labor-slowdown-offsets-elevated-yields.html",
-  "image_path": "../docs/news/2026-10-05-gold-edges-higher-as-labor-slowdown-offsets-elevated-yields.jpg"
-}
+[
+  {
+    "headline": "Wall Street Strategists Turn to Cross-Asset Hedges Amid Yield Surge",
+    "teaser": "Wall Street strategists are focusing on cross-asset trades as equities, gold and oil struggle while Treasury yields surge. This shift highlights how soaring yields and struggling asset classes create new pressures for precious metals.",
+    "headline_km": "យុទ្ធសាស្ត្រទីផ្សារ Wall Street ងាករកដំណោះស្រាយការពារហានិភ័យចំពេលអត្រាការប្រាក់ប័ណ្ណបំណុលហក់ឡើង",
+    "teaser_km": "អ្នកយុទ្ធសាស្ត្រ Wall Street កំពុងផ្តោតលើការជួញដូរឆ្លងទ្រព្យសកម្ម ខណៈភាគហ៊ុន មាស និងប្រេងជួបការលំបាក ενពេលដែលទិន្នផលប័ណ្ណបំណុលហក់ឡើង។ ការផ្លាស់ប្តូរនេះបង្ហាញពីសម្ពាធថ្មីសម្រាប់លោហៈមានតម្លៃ។",
+    "impact": "mixed",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-05-wall-street-strategists-turn-to-cross-asset-hedges-amid-yield-surge.html",
+    "image_path": "../docs/news/2026-10-05-wall-street-strategists-turn-to-cross-asset-hedges-amid-yield-surge.jpg"
+  }
+]
