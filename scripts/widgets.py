@@ -4,13 +4,13 @@ TICKER_HTML = """
   <div class="tradingview-widget-container__widget"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
   {
-    "symbols": [
+    ""symbols": [
       {"proName": "OANDA:XAUUSD", "title": "Gold"},
-      {"proName": "TVC:DXY", "title": "USD Index"},
-      {"proName": "TVC:US10Y", "title": "US 10Y"},
       {"proName": "OANDA:XAGUSD", "title": "Silver"},
-      {"proName": "TVC:USOIL", "title": "Oil"},
-      {"proName": "FX:EURUSD", "title": "EUR/USD"}
+      {"proName": "FX:EURUSD", "title": "EUR/USD"},
+      {"proName": "FX:USDJPY", "title": "USD/JPY"},
+      {"proName": "BITSTAMP:BTCUSD", "title": "Bitcoin"},
+      {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"}
     ],
     "showSymbolLogo": true,
     "colorTheme": "dark",
