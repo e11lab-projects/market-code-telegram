@@ -1,11 +1,20 @@
 [
   {
-    "headline": "Spot Gold Rises as October Fed Rate Hike Odds Wane",
-    "teaser": "Spot gold climbed 0.6% to $4,165.49 after a soft September jobs report lowered tightening expectations. Reduced chances of a Fed rate hike lessen yield competition against non-yielding bullion.",
-    "headline_km": "តម្លៃមាស Spot កើនឡើង ខណៈឱកាសដំឡើងការប្រាក់របស់ Fed ក្នុងខែតុលាធ្លាក់ចុះ",
-    "teaser_km": "តម្លៃមាស Spot បានកើនឡើង 0.6% ដល់ 4,165.49 ដុល្លារ បន្ទាប់ពីរបាយការណ៍ការងារខែកញ្ញាខ្សោយបានកាត់បន្ថយការរំពឹងទុកលើការរឹតបន្តឹង។ ការធ្លាក់ចុះនៃឱកាសដំឡើងអត្រាការប្រាក់របស់ Fed ជួយកាត់បន្ថយសម្ពាធលើលោហៈធាតុដែលមិនផ្តល់ផលប័ត្រ។",
-    "impact": "bullish",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-05-spot-gold-rises-as-october-fed-rate-hike-odds-wane.html",
-    "image_path": "../docs/news/2026-10-05-spot-gold-rises-as-october-fed-rate-hike-odds-wane.jpg"
+    "headline": "Tech Stocks Repriced as Yields and Rate Pressures Mount",
+    "teaser": "A weak jobs report, lofty Treasury yields near 5.3%, and volatile commodity prices have put rate-sensitive growth stocks under the microscope. This macro environment heavily influences rate expectations, driving shifts in capital between bonds and precious metals.",
+    "headline_km": "ភាគហ៊ុនបច្ចេកវិទ្យាធ្លាក់ក្រោមសម្ពាធ ខណៈអត្រាผลចំណេញមូលបត្របំណុលនិងអត្រាការប្រាក់កើនឡើង",
+    "teaser_km": "របាយការណ៍ការងារទន់ខ្សោយ អត្រាผลចំណេញមូលបត្របំណុលជិត 5.3% និងតម្លៃទំនិញមានការប្រែប្រួល បានដាក់សម្ពាធលើភាគហ៊ុនប្ចេកវិទ្យា។ បរិយាកាសម៉ាក្រូសេដ្ឋកិច្ចនេះជំរុញឱ្យមានការផ្លាស់ប្តូរទុនរវាងមូលបត្របំណុលនិងមាស។",
+    "impact": "mixed",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-05-tech-stocks-repriced-as-yields-and-rate-pressures-mount.html",
+    "image_path": "../docs/news/2026-10-05-tech-stocks-repriced-as-yields-and-rate-pressures-mount.jpg"
+  },
+  {
+    "headline": "SEC Clears Leveraged Crypto and Precious Metals Exchange Funds",
+    "teaser": "The agency approved a Cboe rule for funds tracking daily moves of Bitcoin, Ethereum, gold, silver, oil, and natural gas. New regulated derivative products could shift institutional sentiment and trading volumes across physical and paper gold markets.",
+    "headline_km": "SEC អනුម័តមូលនិធិ leveraged សម្រាប់គ្រីបតូ និងលោហៈមានតម្លៃ",
+    "teaser_km": "ទីភ្នាក់ងារនេះបានអនុម័តច្បាប់ Cboe សម្រាប់មូលនិធិដែលតាមដានការផ្លាស់ប្តូរតម្លៃប្រចាំថ្ងៃរបស់ Bitcoin, Ethereum, មាស និងប្រាក់។ ផលិតផលនិស្សន្ទវត្ថុថ្មីទាំងនេះអាចផ្លាស់ប្តូរអារម្មណ៍វិនិយោគិន និងបរិមាណជួញដូរលើទីផ្សារមាស។",
+    "impact": "mixed",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-05-sec-clears-leveraged-crypto-and-precious-metals-exchange-funds.html",
+    "image_path": "../docs/news/2026-10-05-sec-clears-leveraged-crypto-and-precious-metals-exchange-funds.jpg"
   }
 ]

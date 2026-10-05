@@ -137,5 +137,19 @@
     "image_subject": "A collage illustration featuring plain gold bars with blank unmarked surfaces, the Nasdaq stock exchange building facade, and a single upward-pointing arrow representing rising market value.",
     "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-hits-fresh-highs-while-182800216.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-05",
+    "headline": "Tech Stocks Repriced as Yields and Rate Pressures Mount",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States financial bond market building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/3-us-tech-stocks-investors-170728410.html?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-10-05",
+    "headline": "SEC Clears Leveraged Crypto and Precious Metals Exchange Funds",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a stock exchange financial building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://decrypt.co/380108/sec-clears-3x-leveraged-bitcoin-ethereum-funds?.tsrc=rss",
+    "alert": true
   }
 ]
