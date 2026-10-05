@@ -122,7 +122,7 @@ nav a{color:var(--text)}
 .join:hover{text-decoration:none;opacity:.9}
 .lang button{background:transparent;color:var(--text);border:1px solid var(--line);padding:5px 12px;border-radius:8px;cursor:pointer;font-size:14px;font-family:inherit}
 html[data-lang="en"] .b-en,html[data-lang="km"] .b-km{background:var(--cyan);color:#06222a;border-color:var(--cyan)}
-.tickerbar{border-bottom:1px solid var(--line);min-height:46px}
+.tickerbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);min-height:46px}
 main{max-width:920px;margin:0 auto;padding:26px 18px 60px}
 h1{font-size:30px;line-height:1.3;margin:8px 0 18px}
 .hero{padding:6px 0}
