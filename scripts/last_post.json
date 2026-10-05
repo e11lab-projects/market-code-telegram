@@ -1,9 +1,14 @@
 {
-  "headline": "Gold Futures Erase Jobs Gains, Sinking Lower Intraday",
-  "teaser": "Gold futures surrendered their early jobs-data rally, turning lower midway through the session. This intraday reversal shows traders fading soft-data gains, directly impacting near-term sentiment for XAU/USD.",
-  "headline_km": "កិច្ចសន្យាអនាគតមាសបាត់បង់ការកើនឡើងពីទិន្នន័យការងារ ដោយធ្លាក់ចុះវិញក្នុងថ្ងៃ",
-  "teaser_km": "កិច្ចសន្យាអនាគតមាសបានបាត់បង់ការកើនឡើងដំបូងដែលទទួលបានពីទិន្នន័យការងារ ដោយបានធ្លាក់ចុះវិញនៅពាក់កណ្តាលថ្ងៃ។ ការបញ្ច្រាសទិសដៅក្នុងថ្ងៃនេះបង្ហាញពីការលក់ទប់ទល់នឹងការឡើងថ្លៃ ដែលជះឥទ្ធិពលផ្ទាល់ដល់មនោសញ្ចេតនាលើ XAU/USD។",
-  "impact": "bearish",
-  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-03-gold-futures-erase-jobs-gains-sinking-lower-intraday.html",
-  "image_path": "../docs/news/2026-10-03-gold-futures-erase-jobs-gains-sinking-lower-intraday.jpg"
+  "headline": "Key US Data and Fed Minutes Ahead for Gold Traders",
+  "teaser": "Upcoming US economic releases may drive fresh swings in gold (XAU/USD). Traders should monitor the ISM Services PMI and FOMC Meeting Minutes closely.",
+  "headline_km": "ទិន្នន័យសេដ្ឋកិច្ចអាមេរិក និងកំណត់ហេតុ FOMC សម្រាប់អ្នកជួញដូរមាស",
+  "teaser_km": "ព្រឹត្តិការណ៍សេដ្ឋកិច្ចអាមេរិកសំខាន់ៗអាចជំរុញឱ្យតម្លៃមាស (XAU/USD) ប្រែប្រួលខ្លាំង។ អ្នកជួញដូរគួរតាមដានរបាយការណ៍ ISM Services PMI និងកំណត់ហេតុ FOMC ឱ្យបានដិតដល់។",
+  "impact": "",
+  "impact_line": "Event risk: ⚠ Volatility possible",
+  "extra": [
+    "🕒 Mon 21:00 · ISM Services PMI (Forecast 55.1 | Previous 55.4)",
+    "🕒 Thu 01:00 · FOMC Meeting Minutes (Forecast n/a | Previous n/a)"
+  ],
+  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-05-key-us-data-and-fed-minutes-ahead-for-gold-traders.html",
+  "image_path": "../docs/news/2026-10-05-key-us-data-and-fed-minutes-ahead-for-gold-traders.jpg"
 }
