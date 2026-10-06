@@ -1,11 +1,11 @@
 [
   {
-    "headline": "Inflation Concerns and Government Policy Shape Market Sentiment",
-    "teaser": "PM Capital released its Q2 2026 investor letter, highlighting that persistent inflation and central bank challenges are shaping market sentiment. This macro backdrop impacts gold as investors reassess policy paths and inflation hedging.",
-    "headline_km": "ការព្រួយបារម្ភเรื่องអតិផរណា এবং គោលនយោបាយរដ្ឋាភិបាល កំណត់ទិសដៅទីផ្សារ",
-    "teaser_km": "ក្រុមហ៊ុន PM Capital បានបញ្ចេញលិខិតវិនិយោគិនត្រីមាសទី២ ឆ្នាំ២០២៦ ដោយបញ្ជាក់ថាអតិផរណាជាប់រហូតកំពុងកំណត់ទិសដៅទីផ្សារ។ ស្ថានភាពម៉ាក្រូសេដ្ឋកិច្ចនេះមានឥទ្ធិពលលើ មាស ពេលអ្នកជួញដូរវាយតម្លៃឡើងវិញនូវគោលនយោបាយធនាគារកណ្តាល។",
-    "impact": "mixed",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-06-inflation-concerns-and-government-policy-shape-market-sentiment.html",
-    "image_path": "../docs/news/2026-10-06-inflation-concerns-and-government-policy-shape-market-sentiment.jpg"
+    "headline": "Energy Shock and Yield Surge Weigh on Mining Stocks",
+    "teaser": "The world's 50 biggest miners lost $264 billion in September as a Fed rate hike and surging bond yields dragged gold lower. Higher yields and rate pressures typically pressure non-yielding bullion.",
+    "headline_km": "ការធ្លាក់ចុះតម្លៃភាគហ៊ុននិងប្រាក់ចំណូលសញ្ញាប័ណ្ណប៉ះពាល់ដល់ទីផ្សារមាស",
+    "teaser_km": "ក្រុមហ៊ុនរ៉ែធំជាងគេចំនួន 50 នៅលើពិភពលោកបានខាតបង់ទឹកប្រាក់ចំនួន 264 ប៊ីលានដុល្លារអាមេរិកក្នុងខែកញ្ញា ដោយសារការដំឡើងអត្រាការប្រាក់របស់ Fed និងការកើនឡើងនៃប្រាក់ចំណូលសញ្ញាប័ណ្ណ។ កត្តាទាំងនេះបង្កើតសម្ពាធយ៉ាងខ្លាំងដល់ទីផ្សារមាស។",
+    "impact": "bearish",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-06-energy-shock-and-yield-surge-weigh-on-mining-stocks.html",
+    "image_path": "../docs/news/2026-10-06-energy-shock-and-yield-surge-weigh-on-mining-stocks.jpg"
   }
 ]
