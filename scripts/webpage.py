@@ -37,7 +37,7 @@ def clean_km(text):
     return " ".join(t for t in tokens if not FOREIGN.search(t))
 def bi(en, km, tag="span", cls=""):
     en = str(en)
-        km = clean_km(str(km).strip()) if km else en
+    km = clean_km(str(km).strip()) if km else en
     if not km.strip():
         km = en
     extra = (" " + cls) if cls else ""
