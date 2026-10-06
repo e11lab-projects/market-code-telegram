@@ -11,14 +11,13 @@ on:
           - calendar
         default: news
   schedule:
-    - cron: "7 7-23/2 * * 1-5"
-      timezone: "Asia/Phnom_Penh"
-    - cron: "47 19 * * 1-5"
-      timezone: "Asia/Phnom_Penh"
-    - cron: "47 20 * * 1-5"
-      timezone: "Asia/Phnom_Penh"
-    - cron: "30 7 * * 1-5"
-      timezone: "Asia/Phnom_Penh"
+    # News every 2 hours, 07:07 to 23:07 Cambodia time = 00:07 to 16:07 UTC
+    - cron: "7 0-16/2 * * 1-5"
+    # Extra news checks after US data: 19:47 and 20:47 Cambodia time
+    - cron: "47 12 * * 1-5"
+    - cron: "47 13 * * 1-5"
+    # Calendar heads-up: 07:30 Cambodia time = 00:30 UTC
+    - cron: "30 0 * * 1-5"
 
 permissions:
   contents: write
@@ -42,6 +41,20 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Show run info
+        run: |
+          echo "Trigger: ${{ github.event_name }}"
+          echo "Cron that fired: ${{ github.event.schedule }}"
+          echo "UTC now: $(date -u '+%Y-%m-%d %H:%M')"
+          echo "Cambodia now: $(TZ=Asia/Phnom_Penh date '+%Y-%m-%d %H:%M')"
+          {
+            echo "### Run info"
+            echo "- Trigger: ${{ github.event_name }}"
+            echo "- Cron: ${{ github.event.schedule }}"
+            echo "- UTC time: $(date -u '+%H:%M')"
+            echo "- Cambodia time: $(TZ=Asia/Phnom_Penh date '+%H:%M')"
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Install packages
         run: pip install -r requirements.txt
 
@@ -60,7 +73,7 @@ jobs:
       - name: Choose what to run
         run: |
           SCRIPT="news_post.py"
-          if [ "${{ github.event.schedule }}" = "30 7 * * 1-5" ] || [ "${{ github.event.inputs.mode }}" = "calendar" ]; then
+          if [ "${{ github.event.schedule }}" = "30 0 * * 1-5" ] || [ "${{ github.event.inputs.mode }}" = "calendar" ]; then
             SCRIPT="calendar_post.py"
           fi
           echo "SCRIPT=$SCRIPT" >> "$GITHUB_ENV"
