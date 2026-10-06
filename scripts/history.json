@@ -207,5 +207,19 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a dark stormy sea with a shipping vessel silhouette and a drone above, and a single upward-pointing arrow representing rising market value.",
     "link": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Advisors Flag Structural Market Risks as Stocks Hit Records",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a modern stock market exchange building facade displaying record trading levels, and a single upward-pointing arrow representing rising market value.",
+    "link": "https://www.thestreet.com/video/market-risks-are-building-how-to-prepare-for-next-pullback?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Jim Cramer Sees Major Gold Move After Brutal Plunge",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a large financial market sentiment analysis chart symbol sculpture, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.thestreet.com/investing/jim-cramer-sees-gold-rebound?.tsrc=rss",
+    "alert": false
   }
 ]
