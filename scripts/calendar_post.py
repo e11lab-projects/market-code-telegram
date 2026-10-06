@@ -34,7 +34,9 @@ KHMER_RULES = (
     "Khmer terms: gold = មាស; inflation = អតិផរណា; interest rate = "
     "អត្រាការប្រាក់; central bank = ធនាគារកណ្តាល; US dollar = ដុល្លារអាមេរិក; "
     "market = ទីផ្សារ; traders = អ្នកជួញដូរ. For other technical terms you are "
-    "not sure about, keep the English term in Latin letters.\n"
+        "not sure about, keep the English term in Latin letters. Use ONLY Khmer "
+    "script, plus Latin letters for names and abbreviations. Never use Thai, "
+    "Vietnamese, Chinese or any other script.\n"
 )
 
 
