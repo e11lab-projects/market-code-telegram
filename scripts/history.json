@@ -165,5 +165,19 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-stronger-dollar-yields-233914209.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Gold Edges Higher as Global Conditions and Inflation Weigh",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a global macroeconomic data chart symbol sculpture, and a single upward-pointing arrow representing supportive market conditions.",
+    "link": "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-tuesday-october-6-2026-gold-edges-higher-as-investors-monitor-domestic-and-global-conditions-111213149.html?.tsrc=rss",
+    "alert": false
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Inflation Concerns and Government Policy Shape Market Sentiment",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a global macroeconomic data chart symbol sculpture, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/gold-price-volatility-drives-short-124018633.html?.tsrc=rss",
+    "alert": true
   }
 ]
