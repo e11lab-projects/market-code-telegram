@@ -27,10 +27,19 @@ def slugify(text):
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return s[:70].strip("-") or "story"
 
+FOREIGN = re.compile(
+    r"[\u0E00-\u0EFF\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u024F\u1E00-\u1EFF\u3000-\u9FFF\uAC00-\uD7AF]"
+)
 
+
+def clean_km(text):
+    tokens = str(text).split(" ")
+    return " ".join(t for t in tokens if not FOREIGN.search(t))
 def bi(en, km, tag="span", cls=""):
     en = str(en)
-    km = str(km).strip() if km else en
+        km = clean_km(str(km).strip()) if km else en
+    if not km.strip():
+        km = en
     extra = (" " + cls) if cls else ""
     return (
         f'<{tag} class="en{extra}" lang="en">{esc(en)}</{tag}>'
