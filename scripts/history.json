@@ -151,5 +151,19 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a stock exchange financial building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://decrypt.co/380108/sec-clears-3x-leveraged-bitcoin-ethereum-funds?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Gold Holds Near USD 4,140 as Dollar and Yields Offset Fed Rate Outlook",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-holds-near-4-140-012306866.html?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Gold Steadies as Strong Dollar and Yields Weigh",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-stronger-dollar-yields-233914209.html?.tsrc=rss",
+    "alert": true
   }
 ]
