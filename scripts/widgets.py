@@ -15,7 +15,7 @@ TICKER_HTML = """
     "showSymbolLogo": false,
     "colorTheme": "dark",
     "isTransparent": true,
-    "displayMode": "compact",
+    "displayMode": "regular",
     "locale": "en"
   }
   </script>
