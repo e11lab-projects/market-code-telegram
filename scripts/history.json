@@ -193,5 +193,19 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States international trade shipping port container terminal, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html",
     "alert": false
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "S&P 500 Hits New Highs as Falling Oil Prices Ease Inflation",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a stock exchange financial building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.fool.com/coverage/stock-market-today/2026/10/06/stock-market-midday-oct-6-s-and-p-500-sets-new-high-nuclear-stocks-surge/?.tsrc=rss",
+    "alert": false
+  },
+  {
+    "date": "2026-10-06",
+    "headline": "Black Sea Drone Attack Sinks Ship Amid Rising Regional Tensions",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a dark stormy sea with a shipping vessel silhouette and a drone above, and a single upward-pointing arrow representing rising market value.",
+    "link": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
+    "alert": true
   }
 ]
