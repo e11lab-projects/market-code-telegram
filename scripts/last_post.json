@@ -1,11 +1,13 @@
-[
-  {
-    "headline": "Advisors Flag Structural Market Risks as Stocks Hit Records",
-    "teaser": "As major stock indexes touch record highs, analysts highlight hidden structural risks that could prompt a future market pullback. This shifting sentiment brings renewed focus to portfolio protection strategies using gold, bonds, and real assets.",
-    "headline_km": "អ្នកជំនាញព្រមានពីហានិភ័យទីផ្សារ ខណៈភាគហ៊ុនឡើងដល់កម្រិតខ្ពស់បំផុត",
-    "teaser_km": "ខណៈទីផ្សារភាគហ៊ុនឡើងដល់កម្រិតខ្ពស់ថ្មី អ្នកវិភាគបានលើកឡើងពីហានិភ័យដែលលាក់កំបាំងដែលអាចនាំឱ្យមានការធ្លាក់ចុះនាពេលអនាគត។ ការផ្លាស់ប្តូរអារម្មណ៍ទីផ្សារនេះបាននាំឱ្យមានការយកចិត្តទុកដាក់សាថ្មីលើការការពារផលប័ត្រដោយប្រើមាសនិងទ្រព្យសកម្មពិតប្រាកដ។",
-    "impact": "bullish",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-06-advisors-flag-structural-market-risks-as-stocks-hit-records.html",
-    "image_path": "../docs/news/2026-10-06-advisors-flag-structural-market-risks-as-stocks-hit-records.jpg"
-  }
-]
+{
+  "headline": "FOMC Meeting Minutes Await Gold Traders",
+  "teaser": "High-impact US economic data is scheduled in the coming hours. Stay prepared for potential market volatility.",
+  "headline_km": "កំណត់ហេតុប្រជុំ FOMC សម្រាប់អ្នកជួញដូរមាស",
+  "teaser_km": "ព្រឹត្តិការណ៍សេដ្ឋកិច្ចអាមេរិកដែលមានឥទ្ធិពលខ្លាំងនឹងមកដល់ក្នុងពេលប៉ុន្មានម៉ោងខាងមុខនេះ។ សូមប្រុងប្រយ័ត្នចំពោះការប្រែប្រួលទីផ្សារ។",
+  "impact": "",
+  "impact_line": "Event risk: ⚠ Volatility possible",
+  "extra": [
+    "🕒 Thu 01:00 · FOMC Meeting Minutes (Forecast n/a | Previous n/a)"
+  ],
+  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-07-fomc-meeting-minutes-await-gold-traders.html",
+  "image_path": "../docs/news/2026-10-07-fomc-meeting-minutes-await-gold-traders.jpg"
+}
