@@ -6,7 +6,7 @@ from io import BytesIO
 from PIL import Image
 
 from feeds import get_items
-from gemini_client import call_gemini
+from gemini_client import call_gemini_json by
 from image_gen import generate_image
 import webpage
 
@@ -152,7 +152,7 @@ def ask_gemini(items, history):
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     text = text.replace("```json", "").replace("```", "").strip()
     return json.loads(text)
-
+    
 
 def make_image(scene, impact):
     try:
