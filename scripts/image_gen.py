@@ -6,36 +6,39 @@ from urllib.parse import quote
 
 STYLE = (
     "Editorial mixed-media collage illustration for a financial news article, "
-    "{bg}. Desaturated black-and-white photographic cutouts of the scene "
-    "elements, combined with bold flat graphic shapes in vivid cyan (turquoise) "
-    "and emerald green. Limited palette: black, charcoal grey, white, vivid "
-    "cyan, emerald green. Any rising arrow or chart is emerald green, any "
-    "falling arrow or chart is cyan. Scene: {scene}. {layout}. {extras}. "
-    "Torn paper edges, subtle paper grain, clean flat composition, no orange, "
-    "no red, no readable text, no letters, no numbers, no logos, no watermark, "
-    "no people"
+    "{bg}. Vintage ink-engraving and pen-sketch line art of the scene elements, "
+    "as if cut from an old etching book and layered together like a collage. "
+    "Limited palette: black, charcoal grey, white, vivid cyan (turquoise) and "
+    "emerald green. Scene: {scene}. {layout}. {extras}. "
+    "Hand-drawn candlestick chart bars rising from the bottom edge like paint "
+    "drips, rising bars in emerald green and falling bars in cyan. "
+    "Cyan and emerald watercolor splashes, black ink splatter, torn paper edges, "
+    "grainy paper texture, lots of empty space, clean composition. "
+    "Any coin or banknote is plain with no inscription. "
+    "no orange, no red, no readable text, no letters, no numbers, no logos, "
+    "no watermark, no people"
 )
 
 BACKGROUNDS = [
     "on a cream off-white paper background",
     "on a cream off-white paper background",
     "on a cream off-white paper background",
-    "on a deep charcoal-black paper background with faint thin grid lines",
+    "on a deep charcoal-black paper background, with white and light-grey line art instead of black",
 ]
 
 LAYOUTS = [
-    "A large vivid cyan circle behind the main subject and a smaller emerald green circle at the edge",
-    "Main subject on the left, secondary elements overlapping in the center, a big cyan brush-stroke shape on the right",
-    "Main subject centered over a wide emerald green paint smear with black ink splatter below",
-    "Two overlapping torn paper layers with a block of cyan behind and green ink drips",
-    "Main subject in the lower half with a huge cyan sun-like disc rising behind it",
-    "Symmetrical composition with the subject in the middle and cyan and green shapes on both sides",
+    "Engraved landmarks across the upper half, one large plain coin in the center as the focal object, candlestick drips below",
+    "Main landmark on the left, a second landmark on the right, a plain coin overlapping both in the middle",
+    "Symmetrical skyline with the main subject in the middle and a wide cyan watercolor wash behind it",
+    "Main subject in the lower half with a huge cyan disc rising behind it and green candlestick drips in front",
+    "Two overlapping torn paper layers, engraved scene on top, a block of cyan behind and green ink drips",
+    "A reflected skyline: the engraved scene above and its ink-splatter reflection below turning into candlestick bars",
 ]
 
 EXTRAS = [
-    "A cyan halftone dot pattern in one corner",
-    "Thin green radiating lines fanning out from behind the subject",
-    "Cyan and green ink splatter dots scattered around",
+    "Emerald green watercolor splashes in one corner",
+    "Cyan halftone dot pattern near one edge",
+    "Cyan and green ink splatter dots scattered around the subject",
     "A faint grid of thin lines in the background with a thin green line chart curve",
     "Small torn cyan and green paper strips along one edge",
 ]
