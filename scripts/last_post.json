@@ -1,11 +1,16 @@
-[
-  {
-    "headline": "Gold Pauses Slide Near $4,155 on Fed Policy Signals",
-    "teaser": "Gold paused a two-day decline to trade near $4,155 an ounce after New York Fed President John Williams outlined the central bank's rate trajectory. Clearer expectations around policy tightening influence yields and the US dollar, directly steering sentiment in XAU/USD.",
-    "headline_km": "មាសទប់លំនឹងក្បែរ 4,155 ដុល្លារ ក្រោយសញ្ញាគោលនយោបាយ Fed",
-    "teaser_km": "តម្លៃមាសបានផ្អាកការធ្លាក់ចុះរយៈពេល 2 ថ្ងៃ ដោយឈរនៅក្បែរ 4,155 ដុល្លារក្នុងមួយអោន បន្ទាប់ពីប្រធាន Fed ប្រចាំ New York លោក John Williams បានលើកឡើងពីទិសដៅអត្រាការប្រាក់។ ការរំពឹងទុកលើការដំឡើងអត្រាការប្រាក់ជះឥទ្ធិពលលើប្រាក់ដុល្លារអាមេរិក និងកំណត់ទិសដៅសម្រាប់ XAU/USD។",
-    "impact": "mixed",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-14-gold-pauses-slide-near-4-155-on-fed-policy-signals.html",
-    "image_path": "../docs/news/2026-10-14-gold-pauses-slide-near-4-155-on-fed-policy-signals.jpg"
-  }
-]
+{
+  "headline": "US CPI Ahead: Gold Faces Crucial Inflation Test",
+  "teaser": "Key US inflation data arrives tonight at 19:30 Phnom Penh time. Gold traders should prepare for potential swings in the dollar and yields.",
+  "headline_km": "ទិន្នន័យ CPI អាមេរិកជិតចេញផ្សាយ៖ ការវាស់កម្តៅសំខាន់សម្រាប់មាស",
+  "teaser_km": "ទិន្នន័យអតិផរណាអាមេរិកសំខាន់ៗនឹងចេញផ្សាយនៅម៉ោង 19:30 យប់នេះ។ អ្នកជួញដូរមាសគួរត្រៀមលក្ខណៈសម្រាប់ការប្រែប្រួលនៃដុល្លារអាមេរិក និង yield។",
+  "impact": "",
+  "impact_line": "Event risk: ⚠ Volatility possible",
+  "extra": [
+    "🕒 Wed 19:30 · Core CPI m/m (Forecast 0.2% | Previous 0.3%)",
+    "🕒 Wed 19:30 · Core CPI y/y (Forecast 2.5% | Previous 2.4%)",
+    "🕒 Wed 19:30 · CPI m/m (Forecast 0.6% | Previous 0.4%)",
+    "🕒 Wed 19:30 · CPI y/y (Forecast 3.6% | Previous 3.4%)"
+  ],
+  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-14-us-cpi-ahead-gold-faces-crucial-inflation-test.html",
+  "image_path": "../docs/news/2026-10-14-us-cpi-ahead-gold-faces-crucial-inflation-test.jpg"
+}
