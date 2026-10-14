@@ -61,3 +61,6 @@ def call_gemini_json(key, prompt):
                 break
             time.sleep(20 * attempt)
     raise RuntimeError("All Gemini models failed. Last: " + last)
+def call_gemini(key, prompt):
+    data = call_gemini_json(key, prompt)
+    return {"candidates": [{"content": {"parts": [{"text": json.dumps(data)}]}}]}
