@@ -1,16 +1,11 @@
-{
-  "headline": "US CPI Ahead: Gold Faces Crucial Inflation Test",
-  "teaser": "Key US inflation data arrives tonight at 19:30 Phnom Penh time. Gold traders should prepare for potential swings in the dollar and yields.",
-  "headline_km": "ទិន្នន័យ CPI អាមេរិកជិតចេញផ្សាយ៖ ការវាស់កម្តៅសំខាន់សម្រាប់មាស",
-  "teaser_km": "ទិន្នន័យអតិផរណាអាមេរិកសំខាន់ៗនឹងចេញផ្សាយនៅម៉ោង 19:30 យប់នេះ។ អ្នកជួញដូរមាសគួរត្រៀមលក្ខណៈសម្រាប់ការប្រែប្រួលនៃដុល្លារអាមេរិក និង yield។",
-  "impact": "",
-  "impact_line": "Event risk: ⚠ Volatility possible",
-  "extra": [
-    "🕒 Wed 19:30 · Core CPI m/m (Forecast 0.2% | Previous 0.3%)",
-    "🕒 Wed 19:30 · Core CPI y/y (Forecast 2.5% | Previous 2.4%)",
-    "🕒 Wed 19:30 · CPI m/m (Forecast 0.6% | Previous 0.4%)",
-    "🕒 Wed 19:30 · CPI y/y (Forecast 3.6% | Previous 3.4%)"
-  ],
-  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-14-us-cpi-ahead-gold-faces-crucial-inflation-test.html",
-  "image_path": "../docs/news/2026-10-14-us-cpi-ahead-gold-faces-crucial-inflation-test.jpg"
-}
+[
+  {
+    "headline": "Fed’s Williams Sees 2026 Hike but No 2027 Increases",
+    "teaser": "New York Fed President John Williams expects one more rate hike in 2026 and none in 2027. Shifting interest rate expectations directly influence dollar strength and holding costs for gold.",
+    "headline_km": "លោក Williams របស់ Fed រំពឹងដំឡើងការប្រាក់នៅឆ្នាំ 2026 តែគ្មាននៅឆ្នាំ 2027",
+    "teaser_km": "ប្រធាន Fed សាខា New York លោក John Williams មើលឃើញការដំឡើងអត្រាការប្រាក់មួយលើកទៀតក្នុងឆ្នាំ 2026 ប៉ុន្តែគ្មានការដំឡើងបន្ថែមនៅឆ្នាំ 2027 ឡើយ។ ទស្សនវិស័យគោលនយោបាយនេះមានឥទ្ធិពលផ្ទាល់លើថ្លៃដើមនៃការកាន់កាប់ និងទិសដៅនៃតម្លៃមាស។",
+    "impact": "mixed",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-14-fed-s-williams-sees-2026-hike-but-no-2027-increases.html",
+    "image_path": "../docs/news/2026-10-14-fed-s-williams-sees-2026-hike-but-no-2027-increases.jpg"
+  }
+]

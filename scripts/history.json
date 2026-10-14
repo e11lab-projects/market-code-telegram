@@ -247,5 +247,12 @@
     "headline": "US CPI Ahead: Gold Faces Crucial Inflation Test",
     "image_subject": "A collage illustration featuring an alarm clock, plain gold bars with blank unmarked surfaces, the Federal Reserve building facade, and a sharp dynamic zigzag line representing market volatility.",
     "link": "calendar:2026-10-14"
+  },
+  {
+    "date": "2026-10-14",
+    "headline": "Fed’s Williams Sees 2026 Hike but No 2027 Increases",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an official central bank press conference podium with microphones, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
+    "alert": true
   }
 ]
