@@ -234,5 +234,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, the International Monetary Fund headquarters building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html",
     "alert": false
+  },
+  {
+    "date": "2026-10-14",
+    "headline": "Gold Pauses Slide Near $4,155 on Fed Policy Signals",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, US dollar banknotes arranged beside a balanced mechanical scale, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-holds-two-day-slide-021307475.html?.tsrc=rss",
+    "alert": true
   }
 ]

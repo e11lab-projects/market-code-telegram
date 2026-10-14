@@ -1,13 +1,11 @@
-{
-  "headline": "FOMC Meeting Minutes Await Gold Traders",
-  "teaser": "High-impact US economic data is scheduled in the coming hours. Stay prepared for potential market volatility.",
-  "headline_km": "កំណត់ហេតុប្រជុំ FOMC សម្រាប់អ្នកជួញដូរមាស",
-  "teaser_km": "ព្រឹត្តិការណ៍សេដ្ឋកិច្ចអាមេរិកដែលមានឥទ្ធិពលខ្លាំងនឹងមកដល់ក្នុងពេលប៉ុន្មានម៉ោងខាងមុខនេះ។ សូមប្រុងប្រយ័ត្នចំពោះការប្រែប្រួលទីផ្សារ។",
-  "impact": "",
-  "impact_line": "Event risk: ⚠ Volatility possible",
-  "extra": [
-    "🕒 Thu 01:00 · FOMC Meeting Minutes (Forecast n/a | Previous n/a)"
-  ],
-  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-07-fomc-meeting-minutes-await-gold-traders.html",
-  "image_path": "../docs/news/2026-10-07-fomc-meeting-minutes-await-gold-traders.jpg"
-}
+[
+  {
+    "headline": "Gold Pauses Slide Near $4,155 on Fed Policy Signals",
+    "teaser": "Gold paused a two-day decline to trade near $4,155 an ounce after New York Fed President John Williams outlined the central bank's rate trajectory. Clearer expectations around policy tightening influence yields and the US dollar, directly steering sentiment in XAU/USD.",
+    "headline_km": "មាសទប់លំនឹងក្បែរ 4,155 ដុល្លារ ក្រោយសញ្ញាគោលនយោបាយ Fed",
+    "teaser_km": "តម្លៃមាសបានផ្អាកការធ្លាក់ចុះរយៈពេល 2 ថ្ងៃ ដោយឈរនៅក្បែរ 4,155 ដុល្លារក្នុងមួយអោន បន្ទាប់ពីប្រធាន Fed ប្រចាំ New York លោក John Williams បានលើកឡើងពីទិសដៅអត្រាការប្រាក់។ ការរំពឹងទុកលើការដំឡើងអត្រាការប្រាក់ជះឥទ្ធិពលលើប្រាក់ដុល្លារអាមេរិក និងកំណត់ទិសដៅសម្រាប់ XAU/USD។",
+    "impact": "mixed",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-14-gold-pauses-slide-near-4-155-on-fed-policy-signals.html",
+    "image_path": "../docs/news/2026-10-14-gold-pauses-slide-near-4-155-on-fed-policy-signals.jpg"
+  }
+]
