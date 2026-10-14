@@ -227,5 +227,12 @@
     "headline": "FOMC Meeting Minutes Await Gold Traders",
     "image_subject": "A collage illustration featuring a wall calendar, an alarm clock, plain gold bars with blank unmarked surfaces, a US dollar banknote, the Federal Reserve building, and a zigzag line showing volatility instead of an arrow.",
     "link": "calendar:2026-10-07"
+  },
+  {
+    "date": "2026-10-14",
+    "headline": "IMF Warns Bond Yields Could Spike as Risks Worsen",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the International Monetary Fund headquarters building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html",
+    "alert": false
   }
 ]
