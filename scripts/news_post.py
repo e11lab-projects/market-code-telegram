@@ -6,7 +6,7 @@ from io import BytesIO
 from PIL import Image
 
 from feeds import get_items
-from gemini_client import call_gemini_json as call_gemini
+from gemini_client import call_gemini
 from image_gen import generate_image
 import webpage
 
