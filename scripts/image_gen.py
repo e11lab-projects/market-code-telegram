@@ -1,60 +1,97 @@
 import os
+import re
 import random
 import base64
 import requests
 from urllib.parse import quote
 
+WIDTH = 1344
+HEIGHT = 768
+
 STYLE = (
-    "Editorial mixed-media collage illustration for a financial news article, "
-    "{bg}. Vintage ink-engraving and pen-sketch line art of the scene elements, "
-    "as if cut from an old etching book and layered together like a collage. "
-    "Limited palette: black, charcoal grey, white, vivid cyan (turquoise) and "
-    "emerald green. Scene: {scene}. {layout}. {extras}. "
-    "Hand-drawn candlestick chart bars rising from the bottom edge like paint "
-    "drips, rising bars in emerald green and falling bars in cyan. "
-    "Cyan and emerald watercolor splashes, black ink splatter, torn paper edges, "
-    "grainy paper texture, lots of empty space, clean composition. "
-    "Any coin or banknote is plain with no inscription. "
-    "no orange, no red, no readable text, no letters, no numbers, no logos, "
-    "no watermark, no people"
+    "Wide panoramic editorial mixed-media collage illustration for a financial "
+    "news article, on a warm cream paper background with subtle paper grain. "
+    "Black-and-white ink engraving and pen-sketch drawings in the style of a "
+    "vintage newspaper illustration showing: {scene}. {layout}. "
+    "Soft watercolor washes in cyan and emerald green behind the subject, black "
+    "ink splatter and dry-brush texture, and a row of thin vertical candlestick "
+    "bars in cyan and green fading downward in the lower third like a "
+    "reflection. Limited palette: cream, black, grey, cyan, emerald green, plus "
+    "small realistic gold bars as a signature detail. Flags and national "
+    "symbols keep their real colors. Clean composition with empty space around "
+    "the subject. No orange, no readable text, no letters, no numbers, no "
+    "logos, no watermark, no people"
 )
 
-BACKGROUNDS = [
-    "on a cream off-white paper background",
-    "on a cream off-white paper background",
-    "on a cream off-white paper background",
-    "on a deep charcoal-black paper background, with white and light-grey line art instead of black",
-]
-
 LAYOUTS = [
-    "Engraved landmarks across the upper half, one large plain coin in the center as the focal object, candlestick drips below",
-    "Main landmark on the left, a second landmark on the right, a plain coin overlapping both in the middle",
-    "Symmetrical skyline with the main subject in the middle and a wide cyan watercolor wash behind it",
-    "Main subject in the lower half with a huge cyan disc rising behind it and green candlestick drips in front",
-    "Two overlapping torn paper layers, engraved scene on top, a block of cyan behind and green ink drips",
-    "A reflected skyline: the engraved scene above and its ink-splatter reflection below turning into candlestick bars",
+    "The main subject is large in the center with related landmarks sketched on the left and right",
+    "The main subject sits on the left third and a wide landscape or sea stretches to the right",
+    "The main subject sits on the right third and a wide landscape or sea stretches to the left",
+    "The main subject is centered and mirrored skylines or coastlines frame both sides",
 ]
 
-EXTRAS = [
-    "Emerald green watercolor splashes in one corner",
-    "Cyan halftone dot pattern near one edge",
-    "Cyan and green ink splatter dots scattered around the subject",
-    "A faint grid of thin lines in the background with a thin green line chart curve",
-    "Small torn cyan and green paper strips along one edge",
-]
+DIRECTIONS = {
+    "bullish": "a single bold emerald green arrow pointing diagonally upward",
+    "bearish": "a single bold cyan arrow pointing diagonally downward",
+    "mixed": "a single bold cyan horizontal arrow pointing sideways",
+    "neutral": "a single bold cyan horizontal arrow pointing sideways",
+}
 
 
-def build_prompt(scene):
-    scene = scene.replace("orange ", "").replace("Orange ", "")
-    return STYLE.format(
-        bg=random.choice(BACKGROUNDS),
-        scene=scene,
-        layout=random.choice(LAYOUTS),
-        extras=random.choice(EXTRAS),
+def strip_arrows(scene):
+    kept = []
+    for part in re.split(r"[,;]", scene):
+        p = part.strip()
+        if not p:
+            continue
+        if re.search(r"\barrows?\b", p, re.I) and len(p.split()) <= 12:
+            continue
+        kept.append(p)
+    return ", ".join(kept)
+
+
+def build_prompt(scene, direction=None):
+    scene = scene.replace("orange ", "").replace("Orange ", "").strip().rstrip(".")
+    if direction in DIRECTIONS:
+        scene = strip_arrows(scene) + ", " + DIRECTIONS[direction]
+    return STYLE.format(scene=scene, layout=random.choice(LAYOUTS))
+
+
+def decode_image(r):
+    ctype = r.headers.get("content-type", "")
+    if ctype.startswith("image"):
+        return r.content
+    data = r.json()
+    result = data.get("result", data)
+    img = result.get("image") if isinstance(result, dict) else None
+    if not img:
+        raise RuntimeError("No image in response: " + str(data)[:200])
+    return base64.b64decode(img)
+
+
+def cloudflare_klein(prompt):
+    account = os.environ["CF_ACCOUNT_ID"]
+    token = os.environ["CF_API_TOKEN"]
+    url = (
+        f"https://api.cloudflare.com/client/v4/accounts/{account}"
+        "/ai/run/@cf/black-forest-labs/flux-2-klein-4b"
     )
+    files = {
+        "prompt": (None, prompt),
+        "width": (None, str(WIDTH)),
+        "height": (None, str(HEIGHT)),
+        "seed": (None, str(random.randint(1, 999999))),
+    }
+    r = requests.post(
+        url, headers={"Authorization": f"Bearer {token}"}, files=files, timeout=150
+    )
+    if r.status_code != 200:
+        print("Cloudflare klein error:", r.status_code, r.text[:300])
+    r.raise_for_status()
+    return decode_image(r)
 
 
-def cloudflare_image(prompt):
+def cloudflare_schnell(prompt):
     account = os.environ["CF_ACCOUNT_ID"]
     token = os.environ["CF_API_TOKEN"]
     url = (
@@ -68,7 +105,7 @@ def cloudflare_image(prompt):
         timeout=90,
     )
     r.raise_for_status()
-    return base64.b64decode(r.json()["result"]["image"])
+    return decode_image(r)
 
 
 def pollinations_image(prompt):
@@ -76,8 +113,8 @@ def pollinations_image(prompt):
     r = requests.get(
         url,
         params={
-            "width": 1344,
-            "height": 768,
+            "width": WIDTH,
+            "height": HEIGHT,
             "model": "flux",
             "nologo": "true",
             "seed": random.randint(1, 999999),
@@ -90,10 +127,14 @@ def pollinations_image(prompt):
     return r.content
 
 
-def generate_image(scene):
-    prompt = build_prompt(scene)
+def generate_image(scene, direction=None):
+    prompt = build_prompt(scene, direction)
     print("Image prompt:", prompt)
-    providers = (("Cloudflare", cloudflare_image), ("Pollinations", pollinations_image))
+    providers = (
+        ("Cloudflare FLUX.2", cloudflare_klein),
+        ("Cloudflare FLUX.1", cloudflare_schnell),
+        ("Pollinations", pollinations_image),
+    )
     for name, fn in providers:
         try:
             data = fn(prompt)
