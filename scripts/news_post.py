@@ -70,7 +70,7 @@ def save_history(history, entry):
 def compress(data):
     try:
         im = Image.open(BytesIO(data)).convert("RGB")
-        im.thumbnail((1024, 1024))
+        im.thumbnail((1280, 1280))
         out = BytesIO()
         im.save(out, "JPEG", quality=82, optimize=True)
         return out.getvalue()
