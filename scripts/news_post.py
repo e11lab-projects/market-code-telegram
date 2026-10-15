@@ -86,7 +86,14 @@ def build_prompt(items, history):
         f"[{i}] (relevance {it['score']}) {it['title']} -- {it['summary']} ({it['source']})"
         for i, it in enumerate(items)
     )
-    return (
+    return ( 
+        GOLD-FIRST PRIORITY RULES (XAU/USD):
+Score each story 1-10 for its impact on gold and the US dollar.
+- 8-10: direct gold/XAU moves; US CPI, PCE, NFP, FOMC; Fed officials signalling rate hikes or cuts; Trump statements on tariffs, sanctions or the Fed; major war escalation affecting oil or safe-haven demand; sharp moves in US yields or the dollar index.
+- 5-7: ECB, BoE, BoJ or PBOC news that moves the USD; oil and energy shocks; US PPI, retail sales, jobless claims; central banks buying gold or Treasuries; silver.
+- 1-4: currency pairs without USD or gold (AUD/JPY, NZD, CAD, MXN), small-economy data, technical forecasts for non-gold pairs, daily price roundups.
+Always explain the effect on XAU/USD through the dollar, yields or safe-haven demand.
+If several headlines cover the same event, choose only the best one "
         "You are the editor of THE MARKET CODE by E11 Lab, writing for gold "
         "(XAU/USD) traders. The website covers ALL news that can affect gold, "
         "including currencies and the wider economy. Telegram alerts are only "
@@ -141,13 +148,6 @@ def build_prompt(items, history):
         "source_index: the integer index of the chosen item.\n\n"
         "RECENTLY POSTED (avoid repeating):\n" + recent + "\n\n"
         "FRESH ITEMS:\n" + listing
-        GOLD-FIRST PRIORITY RULES (XAU/USD):
-Score each story 1-10 for its impact on gold and the US dollar.
-- 8-10: direct gold/XAU moves; US CPI, PCE, NFP, FOMC; Fed officials signalling rate hikes or cuts; Trump statements on tariffs, sanctions or the Fed; major war escalation affecting oil or safe-haven demand; sharp moves in US yields or the dollar index.
-- 5-7: ECB, BoE, BoJ or PBOC news that moves the USD; oil and energy shocks; US PPI, retail sales, jobless claims; central banks buying gold or Treasuries; silver.
-- 1-4: currency pairs without USD or gold (AUD/JPY, NZD, CAD, MXN), small-economy data, technical forecasts for non-gold pairs, daily price roundups.
-Always explain the effect on XAU/USD through the dollar, yields or safe-haven demand.
-If several headlines cover the same event, choose only the best one.
     )
 
 def ask_gemini(items, history):
