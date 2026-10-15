@@ -12,7 +12,7 @@ on:
         default: news
   schedule:
     # News every 2 hours, 07:07 to 23:07 Cambodia time = 00:07 to 16:07 UTC
-    - cron: "7 0-16/2 * * 1-5"
+    - cron: "7 0-16 * * 1-5"
     # Extra news checks after US data: 19:47 and 20:47 Cambodia time
     - cron: "47 12 * * 1-5"
     - cron: "47 13 * * 1-5"
