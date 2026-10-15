@@ -1,16 +1,11 @@
-{
-  "headline": "US PPI and Retail Sales Ahead: Key Watch for Gold",
-  "teaser": "Key US inflation and consumer data arrive tonight alongside upcoming remarks from the Fed. Gold traders should prepare for potential shifts in the dollar, yields, and rate expectations.",
-  "headline_km": "ទិន្នន័យ PPI និង Retail Sales អាមេរិក៖ ចំណុចសំខាន់សម្រាប់ទីផ្សារមាស",
-  "teaser_km": "ទិន្នន័យអតិផរណានិងការចំណាយរបស់អ្នកប្រើប្រាស់អាមេរិកនឹងចេញផ្សាយយប់នេះ រួមជាមួយការថ្លែងសុន្ទរកថារបស់ Fed។ អ្នកជួញដូរមាសគួរត្រៀមលក្ខណៈចំពោះការប្រែប្រួលនៃដុល្លារអាមេរិក និងអត្រាការប្រាក់។",
-  "impact": "",
-  "impact_line": "Event risk: ⚠ Volatility possible",
-  "extra": [
-    "🕒 Thu 19:30 · Core PPI m/m (Forecast 0.3% | Previous 0.2%)",
-    "🕒 Thu 19:30 · Core Retail Sales m/m (Forecast 0.6% | Previous 1.4%)",
-    "🕒 Thu 19:30 · PPI m/m (Forecast 0.6% | Previous 0.4%)",
-    "🕒 Thu 19:30 · Retail Sales m/m (Forecast 0.3% | Previous 1.2%)"
-  ],
-  "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-15-us-ppi-and-retail-sales-ahead-key-watch-for-gold.html",
-  "image_path": "../docs/news/2026-10-15-us-ppi-and-retail-sales-ahead-key-watch-for-gold.jpg"
-}
+[
+  {
+    "headline": "Gold Rebounds as Dollar and Treasury Yields Soften",
+    "teaser": "Gold prices climbed on Thursday as softer Treasury yields and a weaker US dollar boosted demand. The move shows how currency and yield pullbacks can support precious metals even amid lingering interest rate concerns.",
+    "headline_km": "មាសងើបឡើងវិញ ខណៈដុល្លារអាមេរិកនិងទិន្នផលសញ្ញាបណ្ណធ្លាក់ចុះ",
+    "teaser_km": "តម្លៃមាសបានកើនឡើងនៅថ្ងៃព្រហស្បតិ៍ ដោយសារតែការធ្លាក់ចុះនៃដុល្លារអាមេរិកនិងទិន្នផលសញ្ញាបណ្ណរតនាគារ។ ការប្រែប្រួលនេះបង្ហាញពីរបៀបដែលការចុះខ្សោយនៃរូបិយប័ណ្ណនិងទិន្នផលអាចជួយគាំទ្រដល់លោហៈធាតុមានតម្លៃ ទោះបីជាមានការព្រួយបារម្ភអំពីអត្រាការប្រាក់ក៏ដោយ។",
+    "impact": "bullish",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-15-gold-rebounds-as-dollar-and-treasury-yields-soften.html",
+    "image_path": "../docs/news/2026-10-15-gold-rebounds-as-dollar-and-treasury-yields-soften.jpg"
+  }
+]
