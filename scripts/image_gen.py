@@ -164,11 +164,16 @@ def subjects_text(text):
     return "Include " + ", ".join(items) + ". "
 
 
-def chart_text(text):
+def chart_text(text, impact=None):
     up = sum(1 for w in UP_WORDS if _has(text, [w]))
     down = sum(1 for w in DOWN_WORDS if _has(text, [w]))
     if not (up or down or _has(text, MARKET_WORDS)):
         return ""
+            if up == down and isinstance(impact, str):
+        if impact.lower() == "bullish":
+            up += 1
+        elif impact.lower() == "bearish":
+            down += 1
     if up > down:
         return (
             "A large hand-drawn candlestick chart fills the background with a clear "
@@ -187,14 +192,14 @@ def chart_text(text):
     )
 
 
-def build_prompt(scene, headline=""):
+def build_prompt(scene, impact=None, headline=""):
     scene = scene.replace("orange ", "").replace("Orange ", "")
     text = (headline + " " + scene).lower()
     return STYLE.format(
         bg=random.choice(BACKGROUNDS),
         scene=scene,
         subjects=subjects_text(text),
-        chart=chart_text(text),
+        chart=chart_text(text, impact),
         layout=random.choice(LAYOUTS),
         extras=random.choice(EXTRAS),
     )
@@ -236,8 +241,8 @@ def pollinations_image(prompt):
     return r.content
 
 
-def generate_image(scene, headline=""):
-    prompt = build_prompt(scene, headline)
+def generate_image(scene, impact=None, headline=""):
+    prompt = build_prompt(scene, impact, headline)
     print("Image prompt:", prompt)
     providers = (("Cloudflare", cloudflare_image), ("Pollinations", pollinations_image))
     for name, fn in providers:
