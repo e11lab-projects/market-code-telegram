@@ -323,5 +323,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial factory warehouse with shipping pallets and loading docks, and a single downward-pointing arrow representing sinking prices.",
     "link": "https://www.cnbc.com/2026/10/15/pce-ppi-september-fed-reserve-rate-hike.html",
     "alert": true
+  },
+  {
+    "date": "2026-10-16",
+    "headline": "Gold Holds Near $4,160 as Equity Selloff Drives Bond Rally",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a US stock market electronic ticker board showing downward trends alongside stacked government bond certificates, and a single upward-pointing arrow indicating bullish market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-near-4-160-015611640.html?.tsrc=rss",
+    "alert": true
   }
 ]
