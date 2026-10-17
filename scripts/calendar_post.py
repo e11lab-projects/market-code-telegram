@@ -184,7 +184,7 @@ def ask_gemini(lines):
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     text = text.replace("```json", "").replace("```", "").strip()
     return json.loads(text)
-
+    
 
 def main():
     if not webpage.SITE_URL:
@@ -221,7 +221,17 @@ def main():
         extra.append(f"🕒 {stamp} · {title} (Forecast {fc} | Previous {pv})")
     print("Events:", *lines, sep="\n")
 
-    post = ask_gemini(lines)
+        facts = []
+    for when, e in picked:
+        t = event_trend(text_of(e.get("title")))
+        if t:
+            facts.append(f"- {text_of(e.get('title'))}: {t}")
+    mc = market_context()
+    if mc:
+        facts.append("- Market context: " + mc)
+    print("Facts:", *facts, sep="\n")
+
+    post = ask_gemini(lines, facts)
     print("Headline:", post["headline"])
     print("Khmer headline:", text_of(post.get("headline_km")) or "(missing)")
     print("Scene:", post["image_subject"])
