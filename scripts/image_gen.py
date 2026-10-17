@@ -169,7 +169,7 @@ def chart_text(text, impact=None):
     down = sum(1 for w in DOWN_WORDS if _has(text, [w]))
     if not (up or down or _has(text, MARKET_WORDS)):
         return ""
-            if up == down and isinstance(impact, str):
+    if up == down and isinstance(impact, str):
         if impact.lower() == "bullish":
             up += 1
         elif impact.lower() == "bearish":
