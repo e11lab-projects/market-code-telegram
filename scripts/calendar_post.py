@@ -6,7 +6,14 @@ import datetime
 import requests
 from image_gen import generate_image
 import webpage
+try:
+    from trend_data import event_trend, market_context
+except Exception:
+    def event_trend(name):
+        return ""
 
+    def market_context():
+        return ""
 CAL_URLS = [
     "https://nfs.faireconomy.media/ff_calendar_thisweek.json",
     "https://cdn-nfs.faireconomy.media/ff_calendar_thisweek.json",
