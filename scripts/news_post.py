@@ -160,9 +160,9 @@ def ask_gemini(items, history):
     return json.loads(text)
     
 
-def make_image(scene, impact):
+def make_image(scene, impact, headline=""):
     try:
-        return generate_image(scene, impact)
+        return generate_image(scene, impact, headline)
     except TypeError:
         return generate_image(scene)
 
