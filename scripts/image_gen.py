@@ -241,6 +241,87 @@ def pollinations_image(prompt):
     return r.content
 
 
+WIKI_API = "https://en.wikipedia.org/w/api.php"
+COMMONS_API = "https://commons.wikimedia.org/w/api.php"
+# Wikimedia asks bots to identify themselves: put your site address or email here
+WIKI_UA = {"User-Agent": "MarketCodeBot/1.0 (https://e11lab-projects.github.io/market-code-telegram)"}
+
+# lowercase keywords in the headline -> exact Wikipedia article title
+PEOPLE = [
+    (["trump"], "Donald_Trump"),
+]
+
+
+def fetch_portrait(title):
+    try:
+        r = requests.get(WIKI_API, headers=WIKI_UA, timeout=30, params={
+            "action": "query", "titles": title, "prop": "pageimages",
+            "piprop": "name|thumbnail", "pithumbsize": 800,
+            "redirects": 1, "format": "json"})
+        r.raise_for_status()
+        page = next(iter(r.json()["query"]["pages"].values()))
+        fname = page.get("pageimage")
+        thumb = page.get("thumbnail", {}).get("source")
+        if not fname or not thumb:
+            return None
+        r = requests.get(COMMONS_API, headers=WIKI_UA, timeout=30, params={
+            "action": "query", "titles": "File:" + fname, "prop": "imageinfo",
+            "iiprop": "extmetadata", "format": "json"})
+        r.raise_for_status()
+        info = next(iter(r.json()["query"]["pages"].values())).get("imageinfo")
+        if not info:
+            return None
+        lic = info[0].get("extmetadata", {}).get("LicenseShortName", {}).get("value", "").lower()
+        if not ("public domain" in lic or "cc0" in lic or lic.startswith("pd")):
+            print("Portrait skipped, license:", lic)
+            return None
+        r = requests.get(thumb, headers=WIKI_UA, timeout=60)
+        r.raise_for_status()
+        return r.content
+    except Exception as e:
+        print("Portrait fetch failed:", e)
+        return None
+
+
+def add_person(img_bytes, text):
+    text = text.lower()
+    title = None
+    for words, t in PEOPLE:
+        if _has(text, words):
+            title = t
+            break
+    if not title:
+        return img_bytes
+    face_bytes = fetch_portrait(title)
+    if not face_bytes:
+        return img_bytes
+    try:
+        import io
+        from PIL import Image, ImageDraw, ImageOps
+
+        base = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+        w, h = base.size
+        side = int(min(w, h) * 0.42)
+        face = Image.open(io.BytesIO(face_bytes)).convert("L")
+        face = ImageOps.autocontrast(face)
+        face = ImageOps.fit(face, (side, side), centering=(0.5, 0.25)).convert("RGB")
+        mask = Image.new("L", (side, side), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, side - 1, side - 1), fill=255)
+        margin = int(side * 0.15)
+        x, y = margin, h - side - margin
+        pad = int(side * 0.1)
+        draw = ImageDraw.Draw(base)
+        draw.ellipse((x + pad, y - pad, x + side + pad, y + side - pad), fill=(16, 185, 129))
+        draw.ellipse((x - 6, y - 6, x + side + 6, y + side + 6), fill=(255, 255, 255))
+        base.paste(face, (x, y), mask)
+        out = io.BytesIO()
+        base.save(out, format="JPEG", quality=92)
+        return out.getvalue()
+    except Exception as e:
+        print("Person overlay failed:", e)
+        return img_bytes
+
+
 def generate_image(scene, impact=None, headline=""):
     prompt = build_prompt(scene, impact, headline)
     print("Image prompt:", prompt)
@@ -249,6 +330,7 @@ def generate_image(scene, impact=None, headline=""):
         try:
             data = fn(prompt)
             print(f"Image created by {name}")
+            data = add_person(data, headline + " " + scene)
             return data, name
         except Exception as e:
             print(f"{name} failed: {e}")
