@@ -335,3 +335,4 @@ def generate_image(scene, impact=None, headline=""):
         except Exception as e:
             print(f"{name} failed: {e}")
     raise RuntimeError("All image providers failed")
+    
