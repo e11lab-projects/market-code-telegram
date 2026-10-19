@@ -386,5 +386,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, an outline map of China alongside electronic microchip wafers, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.bbc.co.uk/news/articles/cm5yn098xz8lo?at_medium=RSS&at_campaign=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-19",
+    "headline": "Gold Slips as Dollar Gains and Yields Edge Up",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside stacked banknotes, and a single downward-pointing arrow representing sinking prices.",
+    "link": "https://finance.yahoo.com/m/08a6cbbd-7f5d-3517-9903-6a3029e89705/gold-slips%2C-dollar-gains%2C.html?.tsrc=rss",
+    "alert": true
   }
 ]
