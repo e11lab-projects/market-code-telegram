@@ -491,5 +491,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces beside an electronic financial exchange ticker display showing currency and metal symbols, accompanied by a single downward-pointing arrow representing falling prices.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-falls-near-4-115-013120980.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "Mining Equities Tumble Following Broad Freedom Broker Downgrades",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a stock exchange trading floor computer monitor displaying downward financial equity charts, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/agnico-barrick-newmont-fall-following-152349756.html?.tsrc=rss",
+    "alert": false
   }
 ]
