@@ -498,5 +498,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a stock exchange trading floor computer monitor displaying downward financial equity charts, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/stocks/articles/agnico-barrick-newmont-fall-following-152349756.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "RBC Flags Margin Squeeze for Gold Shares Ahead of Results",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial mining company corporate skyscraper building with financial charts, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.proactiveinvestors.com/companies/news/1100553/rbc-flags-downside-risks-for-gold-shares-ahead-of-quarterly-results-1100553.html?.tsrc=rss",
+    "alert": true
   }
 ]
