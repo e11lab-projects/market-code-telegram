@@ -477,5 +477,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial heavy mining extraction excavator vehicle, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/barrick-mining-b-earnings-rose-172743336.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-22",
+    "headline": "US Orders Saudi Diplomat Evacuation as Middle East Attacks Escalate",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an airport control tower beside an industrial fuel storage tank, and a single upward-pointing arrow indicating safe-haven demand.",
+    "link": "https://www.bbc.co.uk/news/articles/c6x2vpk93770o?at_medium=RSS&at_campaign=rss",
+    "alert": true
   }
 ]
