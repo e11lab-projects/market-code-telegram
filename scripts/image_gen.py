@@ -145,3 +145,4 @@ def generate_image(scene, impact=None, *args, **kwargs):
 
     print("Using the branded fallback card")
     return add_person(fallback_card(impact), text), "Fallback card"
+    
