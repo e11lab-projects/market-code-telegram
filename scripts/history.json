@@ -547,5 +547,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces beside a digital financial exchange chart showing declining curves and an industrial oil drilling rig, with a single downward-pointing arrow representing falling prices.",
     "link": "https://finance.yahoo.com/m/8d9719a0-cc1d-37d7-acb7-d258f4d2d0fc/why-gold-is-losing-its-status.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-23",
+    "headline": "Oil Climbs on Expected US Strikes on Iran and Elections",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial oil drilling rig platform with flare stacks, and a single upward-pointing arrow indicating rising market value.",
+    "link": "https://www.marketwatch.com/story/oil-markets-are-on-edge-ahead-of-the-weekend-as-midterm-elections-near-and-fresh-u-s-strikes-on-iran-are-predicted-8c27e634?mod=mw_rss_topstories",
+    "alert": true
   }
 ]
