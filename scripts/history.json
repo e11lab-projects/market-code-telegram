@@ -519,5 +519,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces beside an offshore oil drilling rig platform and industrial pipelines, accompanied by a single downward-pointing arrow indicating declining market value.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-hits-3-mth-low-022145269.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-23",
+    "headline": "Gold Falls Below $4,000 Following Equity Market Slump",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a digital electronic financial exchange stock market chart display showing a declining Nasdaq graph, and a single downward-pointing arrow indicating bearish market value.",
+    "link": "https://beincrypto.com/gold-price-below-4000-tech-selloff/?.tsrc=rss",
+    "alert": true
   }
 ]
