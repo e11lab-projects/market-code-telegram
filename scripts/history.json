@@ -512,5 +512,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces beside a stack of US dollar banknotes and an official employment records binder, with a single downward-pointing arrow indicating bearish pressure.",
     "link": "https://www.cnbc.com/2026/10/22/jobless-claims-record-low-weekly.html",
     "alert": true
+  },
+  {
+    "date": "2026-10-23",
+    "headline": "Gold Drops to Three-Month Low on Lingering Rate Fears",
+    "image_subject": "Plain gold bars with blank unmarked surfaces beside an offshore oil drilling rig platform and industrial pipelines, accompanied by a single downward-pointing arrow indicating declining market value.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-hits-3-mth-low-022145269.html?.tsrc=rss",
+    "alert": true
   }
 ]
