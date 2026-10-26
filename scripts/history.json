@@ -582,5 +582,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a map of the Middle East region with geopolitical conflict markers, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/geopolitical-tensions-complicate-gold-bull-182438839.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-26",
+    "headline": "Evolution Mining Reports Strong Quarterly Output And Cost Discipline",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial mining corporate headquarters building with financial output data charts, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/operating-results-could-game-changer-160953606.html?.tsrc=rss",
+    "alert": false
   }
 ]
