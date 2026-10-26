@@ -575,5 +575,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial petroleum storage facility with distribution pipes, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/articles/tsx-futures-climb-oil-falls-122609963.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-26",
+    "headline": "Geopolitical Tensions Complicate Gold Outlook, Says Industry Expert",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a map of the Middle East region with geopolitical conflict markers, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/geopolitical-tensions-complicate-gold-bull-182438839.html?.tsrc=rss",
+    "alert": true
   }
 ]
