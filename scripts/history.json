@@ -610,5 +610,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces beside the Federal Reserve building facade, accompanied by a single sideways-pointing arrow indicating neutral market conditions.",
     "link": "https://www.cnbc.com/2026/10/27/federal-reserve-rate-hike-timing-expectations.html",
     "alert": true
+  },
+  {
+    "date": "2026-10-27",
+    "headline": "US Dollar Edges Up Against Loonie As Bond Yields Rise",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a US dollar banknote alongside a Canadian dollar currency symbol and rising Treasury bond yield chart lines, with a single downward-pointing arrow indicating bearish market conditions.",
+    "link": "https://finance.yahoo.com/markets/currencies/articles/us-dollar-edges-against-loonie-173117819.html?.tsrc=rss",
+    "alert": true
   }
 ]
