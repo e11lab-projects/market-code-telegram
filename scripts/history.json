@@ -596,5 +596,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside an oil drilling rig, and a single downward-pointing arrow indicating bearish market value.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-slips-near-4-010-013656079.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-27",
+    "headline": "Gold Holds Near $4,000 Ahead of Fed Decision",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade, and a single sideways-pointing arrow indicating neutral market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-near-4-000-235524054.html?.tsrc=rss",
+    "alert": true
   }
 ]
