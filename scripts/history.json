@@ -603,5 +603,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade, and a single sideways-pointing arrow indicating neutral market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-near-4-000-235524054.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-27",
+    "headline": "CNBC Survey Shows 93% Expect Fed Pause This Week",
+    "image_subject": "Plain gold bars with blank unmarked surfaces beside the Federal Reserve building facade, accompanied by a single sideways-pointing arrow indicating neutral market conditions.",
+    "link": "https://www.cnbc.com/2026/10/27/federal-reserve-rate-hike-timing-expectations.html",
+    "alert": true
   }
 ]
