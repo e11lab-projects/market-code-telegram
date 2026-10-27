@@ -589,5 +589,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial mining corporate headquarters building with financial output data charts, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/stocks/articles/operating-results-could-game-changer-160953606.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-27",
+    "headline": "Gold Slips Near $4,010 Ahead of Fed Decision",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside an oil drilling rig, and a single downward-pointing arrow indicating bearish market value.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-slips-near-4-010-013656079.html?.tsrc=rss",
+    "alert": true
   }
 ]
