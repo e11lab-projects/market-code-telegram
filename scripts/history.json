@@ -624,5 +624,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a map of Eastern Europe featuring a localized ceasefire marker, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-28",
+    "headline": "Bargain Buyers Defend Gold Above $4,000 Prior to PCE",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an array of advanced artificial intelligence server racks within a modern data center, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-above-4-000-012707891.html?.tsrc=rss",
+    "alert": true
   }
 ]
