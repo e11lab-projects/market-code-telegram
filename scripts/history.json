@@ -645,5 +645,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Bank of Canada headquarters building facade alongside Canadian maple leaf currency coins, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/currencies/articles/canadian-dollar-strengthens-against-greenback-172825125.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-10-28",
+    "headline": "Federal Reserve Issues New FOMC Statement",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "alert": true
   }
 ]
