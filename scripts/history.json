@@ -638,5 +638,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a glowing tech stock board alongside a trading desk terminal, and a single downward-pointing arrow representing declining prices.",
     "link": "https://investorshub.advfn.com/market-news/article/38750/gold-prices-decline-towards-4040-as-stronger-dollar-and-fed-rate-outlook-weigh-on-bullion?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-28",
+    "headline": "Loonie Strengthens Against Dollar After Bank of Canada Rate Hike",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Bank of Canada headquarters building facade alongside Canadian maple leaf currency coins, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/currencies/articles/canadian-dollar-strengthens-against-greenback-172825125.html?.tsrc=rss",
+    "alert": false
   }
 ]
