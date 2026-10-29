@@ -687,5 +687,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a Toronto stock exchange financial building exterior alongside a US inflation trend chart, and a single downward-pointing arrow indicating bearish market conditions.",
     "link": "https://finance.yahoo.com/markets/stocks/articles/tsx-slips-gold-miners-tumble-160010055.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-29",
+    "headline": "US Dollar Dips Against Loonie as Oil and Yields Fall",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a US dollar banknote alongside a falling Treasury bond yield chart and a single upward-pointing arrow indicating bullish market sentiment.",
+    "link": "https://finance.yahoo.com/markets/currencies/articles/us-dollar-nudges-lower-against-175340275.html?.tsrc=rss",
+    "alert": true
   }
 ]

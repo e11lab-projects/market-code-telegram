@@ -1,11 +1,11 @@
 [
   {
-    "headline": "TSX Slips as Gold Miners Fall on US Inflation Data",
-    "teaser": "Canada's main stock index dropped as falling gold prices and mining earnings weighed on materials shares amid US inflation data. The assessment of broader US economic data and inflation directly shifts market sentiment for XAU/USD.",
-    "headline_km": "ទីផ្សារ TSX ကျဆົດ ខណៈភាគហ៊ុនរ៉ែស្រុតចុះក្រោមឥទ្ធិពលទិន្នន័យអតិផរណាអាមេរិក",
-    "teaser_km": "សន្ទស្សន៍ភាគហ៊ុនកាណាដាបានធ្លាក់ចុះដោយសារតម្លៃមាសស្រុតចុះនិងប្រាក់ចំណូលរ៉ែខកចិត្ត εν وسط ទិន្នន័យអតិផរណាអាមេរិក។ ការវាយតម្លៃលើទិន្នន័យសេដ្ឋកិច្ចនិងអតិផរណានេះជះឥទ្ធិពលផ្ទាល់ដល់ទីផ្សារ XAU/USD ។",
-    "impact": "bearish",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-29-tsx-slips-as-gold-miners-fall-on-us-inflation-data.html",
-    "image_path": "../docs/news/2026-10-29-tsx-slips-as-gold-miners-fall-on-us-inflation-data.jpg"
+    "headline": "US Dollar Dips Against Loonie as Oil and Yields Fall",
+    "teaser": "The US dollar softened against the Canadian dollar on Thursday afternoon as oil prices and bond yields edged lower. Lower yields and a softer currency can influence broader market conditions for gold.",
+    "headline_km": "ដុល្លារអាមេរិកធ្លាក់ចុះទល់នឹងប្រាក់លូនី ខណៈប្រេងនិងអត្រាការប្រាក់ធ្លាក់ចុះ",
+    "teaser_km": "តម្លៃប្រាក់ដុល្លារអាមេរិកបានធ្លាក់ចុះទល់នឹងប្រាក់កាណាដាក្នុងអំឡុងពេលរសៀលថ្ងៃព្រហស្បតិ៍ ដោយសារតម្លៃប្រេងនិងអត្រាការប្រាក់ប័ណ្ណបំណុលបានធ្លាក់ចុះ។ ការធ្លាក់ចុះនៃអត្រាការប្រាក់និងតម្លៃប្រាក់ដុល្លារអាចជះឥទ្ធិពលដល់ស្ថានភាពទីផ្សារមាសទូទៅ។",
+    "impact": "bullish",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-29-us-dollar-dips-against-loonie-as-oil-and-yields-fall.html",
+    "image_path": "../docs/news/2026-10-29-us-dollar-dips-against-loonie-as-oil-and-yields-fall.jpg"
   }
 ]
