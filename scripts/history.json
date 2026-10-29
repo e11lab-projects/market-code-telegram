@@ -680,5 +680,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, stacked beside a towering upward-trending economic bar chart and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://www.cnbc.com/2026/10/29/pce-inflation-report-september-2026-.html",
     "alert": true
+  },
+  {
+    "date": "2026-10-29",
+    "headline": "TSX Slips as Gold Miners Fall on US Inflation Data",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a Toronto stock exchange financial building exterior alongside a US inflation trend chart, and a single downward-pointing arrow indicating bearish market conditions.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/tsx-slips-gold-miners-tumble-160010055.html?.tsrc=rss",
+    "alert": true
   }
 ]
