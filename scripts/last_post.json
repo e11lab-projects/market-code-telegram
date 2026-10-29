@@ -1,11 +1,11 @@
 [
   {
-    "headline": "Gold Slips as Fed Holds Rates Without Clear Guidance",
-    "teaser": "Gold prices moved lower after the Federal Reserve kept interest rates unchanged while offering limited guidance on future policy. Traders now await upcoming PCE inflation data to gauge whether further tightening remains possible this year.",
-    "headline_km": "តម្លៃមាសធ្លាក់ចុះបន្ទាប់ពី Fed រក្សាអត្រាការប្រាក់ឱ្យនៅដដែលដោយគ្មានភាពច្បាស់លាស់",
-    "teaser_km": "តម្លៃមាសបានធ្លាក់ចុះបន្ទាប់ពី Fed បានរក្សាអត្រាការប្រាក់ឱ្យនៅដដែល ប៉ុន្តែផ្តល់ភាពច្បាស់លាស់តិចតួចអំពីគោលនយោបាយបន្ទាប់។ ទីផ្សារកំពុងរង់ចាំទិន្នន័យអតិផរណា PCE ខាងមុខដើម្បីវាយតម្លៃលទ្ធភាពនៃការរឹតបន្តឹងបន្ថែមនៅឆ្នាំនេះ។",
+    "headline": "Gold Dips as Fed Holds Rates and Awaits Inflation Data",
+    "teaser": "Gold prices eased after the Federal Reserve maintained interest rates without signaling its next policy step. Investors now monitor upcoming US inflation figures for monetary policy clues.",
+    "headline_km": "មាសធ្លាក់ចុះខណៈ Fed រក្សាអត្រាការប្រាក់និងរង់ចាំទិន្នន័យអតិផរណា",
+    "teaser_km": "តម្លៃមាសបានថយចុះបន្ទាប់ពីធនាគារកណ្តាល Fed រក្សាអត្រាការប្រាក់ដោយមិនទាន់បញ្ជាក់ពីជំហានគោលនយោបាយបន្ទាប់។ អ្នកជួញដូរឥឡូវនេះកំពុងតាមដានទិន្នន័យអតិផរណារបស់សហរដ្ឋអាមេរិកដើម្បីរកតម្រុយ.",
     "impact": "bearish",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-29-gold-slips-as-fed-holds-rates-without-clear-guidance.html",
-    "image_path": "../docs/news/2026-10-29-gold-slips-as-fed-holds-rates-without-clear-guidance.jpg"
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-10-29-gold-dips-as-fed-holds-rates-and-awaits-inflation-data.html",
+    "image_path": "../docs/news/2026-10-29-gold-dips-as-fed-holds-rates-and-awaits-inflation-data.jpg"
   }
 ]
