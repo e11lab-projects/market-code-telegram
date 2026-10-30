@@ -694,5 +694,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a US dollar banknote alongside a falling Treasury bond yield chart and a single upward-pointing arrow indicating bullish market sentiment.",
     "link": "https://finance.yahoo.com/markets/currencies/articles/us-dollar-nudges-lower-against-175340275.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-30",
+    "headline": "Gold Slides Below $4,000 as Inflation Worries Mount",
+    "image_subject": "Plain gold bars with blank unmarked surfaces beside an industrial oil refinery storage tank and pipeline facility, with a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-hovers-near-4-000-014613798.html?.tsrc=rss",
+    "alert": true
   }
 ]
