@@ -701,5 +701,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces beside an industrial oil refinery storage tank and pipeline facility, with a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-hovers-near-4-000-014613798.html?.tsrc=rss",
     "alert": true
+  },
+  {
+    "date": "2026-10-30",
+    "headline": "ECB Holds Rate at 2.5% as Traders Eye December Hike",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the European Central Bank Eurotower building facade alongside euro currency coins, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.cnbc.com/2026/10/29/european-central-bank-interest-rates.html",
+    "alert": true
   }
 ]
