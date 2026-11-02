@@ -1,11 +1,11 @@
 [
   {
-    "headline": "Gold Rebounds As Market Jitters Drive Liquidity Demand",
-    "teaser": "មាសកំពុងព្យាយាមងើបឡើងវិញបន្ទាប់ពីខែតុលាដ៏អဆိုးបំផុតចាប់តាំងពីឆ្នាំ 2008 មក ដោយសារភាពរំជើបរំជួលក្នុងទីផ្សារបានប្តូរ ലോហៈនេះទៅជាប្រភពសាច់ប្រាក់។ ការណ៍នេះបង្ហាញពីសម្ពាធជុំវិញកម្រិត USD 4,000 សម្រាប់អ្នកជួញដូរ XAU/USD។",
-    "headline_km": "មាសងើបឡើងវិញខណៈភាពតានតឹងទីផ្សារជំរុញតម្រូវការសាច់ប្រាក់",
-    "teaser_km": "",
-    "impact": "mixed",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-11-02-gold-rebounds-as-market-jitters-drive-liquidity-demand.html",
-    "image_path": "../docs/news/2026-11-02-gold-rebounds-as-market-jitters-drive-liquidity-demand.jpg"
+    "headline": "Stocks Rally and Crude Plummets on Middle East Ceasefire Hopes",
+    "teaser": "Crude oil prices tumbled roughly seven percent on prospects of a Middle East ceasefire, sparking broad risk-on sentiment across major indexes. This geopolitical cooling reduces safe-haven demand, potentially pressuring the XAU/USD pair.",
+    "headline_km": "ទីផ្សារភាគហ៊ុនឡើងថ្លៃស្របពេលតម្លៃប្រេងធ្លាក់ចុះចំពេលមានក្តីសង្ឃឹមឈប់បាញ់នៅមជ្ឈិមបូព៌ា",
+    "teaser_km": "តម្លៃប្រេងឆៅបានធ្លាក់ចុះប្រហែលប្រាំពីរភាគរយដោយសារក្តីសង្ឃឹមនៃការឈប់បាញ់នៅមជ្ឈិមបូព៌ា ដែលជំរុញឱ្យមានការវិនិយោគលើហានិភ័យ។ ការធ្លាក់ចុះនៃភាពតានតឹងនេះអាចកាត់បន្ថយតម្រូវការមាសជាទ្រព្យសុវត្ថិភាព។",
+    "impact": "bearish",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-11-02-stocks-rally-and-crude-plummets-on-middle-east-ceasefire-hopes.html",
+    "image_path": "../docs/news/2026-11-02-stocks-rally-and-crude-plummets-on-middle-east-ceasefire-hopes.jpg"
   }
 ]
