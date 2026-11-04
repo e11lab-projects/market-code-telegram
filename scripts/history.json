@@ -799,5 +799,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, a ballot box for an election alongside a United States dollar banknote, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/five-metals-producers-trade-higher-165200576.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-11-04",
+    "headline": "Gold Holds Near $3,930 Amid Iran Talks and Midterms",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Capitol building facade alongside a diplomatic negotiation table map, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-holds-near-3-930-013232167.html?.tsrc=rss",
+    "alert": true
   }
 ]
