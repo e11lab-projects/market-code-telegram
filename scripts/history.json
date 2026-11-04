@@ -1,11 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "headline": "China Warns Europe Over Potential Business Restrictions",
-    "image_subject": "A map of China and Europe with Chinese yuan and euro banknotes surrounding the territory, accompanied by a single downward-pointing arrow representing rising trade tensions."
-  },
-  {
-    "date": "2026-10-01",
     "headline": "Gold Holds Steady After September Slide Amid Fed Rate Bets",
     "image_subject": "Plain gold bars with blank unmarked surfaces, United States Treasury bonds, and a sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-little-changed-6-september-014800503.html?.tsrc=rss"
@@ -816,6 +811,13 @@
     "headline": "Gold Rallies Past USD 4,000 as Dollar Slips After Midterms",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States dollar banknote alongside a political election ballot box, and a single upward-pointing arrow indicating bullish market movement.",
     "link": "https://finance.yahoo.com/markets/article/gold-and-bitcoin-were-2026s-worst-assets--the-midterms-just-gave-them-a-pulse-174344496.html?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-04",
+    "headline": "Euro Zone Inflation Hits 4% as Looming Rate Hike Pressures Yields",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the European Central Bank headquarters building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.cnbc.com/2026/11/04/euro-zone-cpi-inflation-october-ecb-rate-hike.html",
     "alert": true
   }
 ]
