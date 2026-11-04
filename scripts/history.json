@@ -1,11 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "headline": "Fed Official Flags Persistently High Inflation Amid Strong Labor",
-    "image_subject": "A United States federal building structure surrounded by dollar banknotes and a clear downward-pointing arrow indicating the current monetary policy environment."
-  },
-  {
-    "date": "2026-10-01",
     "headline": "Federal Reserve Finalizes Stress Test Changes",
     "image_subject": "A detailed model of a major central bank headquarters building surrounded by United States dollar banknotes and a prominent sideways-pointing arrow indicating neutral policy adjustments."
   },
@@ -812,6 +807,13 @@
     "headline": "Gold Mining Stocks Surge as US Midterm Results Weaken Dollar",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Capitol building dome and congressional chambers, and a single upward-pointing arrow indicating bullish market movement.",
     "link": "https://investorshub.advfn.com/market-news/article/39243/gold-mining-shares-rally-as-democratic-midterm-victory-weakens-us-dollar-and-lifts-bullion-prices?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-04",
+    "headline": "Investors Rush To Gold As US Dollar Tanks After Midterms",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a US dollar banknote, and a single upward-pointing arrow indicating bullish market movement.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/investors-rushing-gold-us-dollar-171949355.html?.tsrc=rss",
     "alert": true
   }
 ]
