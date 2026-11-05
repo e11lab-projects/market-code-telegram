@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "headline": "Gold Holds Steady After September Slide Amid Fed Rate Bets",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, United States Treasury bonds, and a sideways-pointing arrow indicating mixed market conditions.",
-    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-little-changed-6-september-014800503.html?.tsrc=rss"
-  },
-  {
-    "date": "2026-10-01",
     "headline": "Gold Holds Steady as Softer Inflation Tempers Fed Bets",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steady-softer-inflation-data-000816044.html?.tsrc=rss"
@@ -818,6 +812,13 @@
     "headline": "Euro Zone Inflation Hits 4% as Looming Rate Hike Pressures Yields",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the European Central Bank headquarters building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.cnbc.com/2026/11/04/euro-zone-cpi-inflation-october-ecb-rate-hike.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-05",
+    "headline": "Fed's Barkin Signals Gradual Interest Rate Hikes Ahead",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade, and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html",
     "alert": true
   }
 ]
