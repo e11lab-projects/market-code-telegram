@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "headline": "US Economic Data Highlights Inflation and Labor Market Metrics",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single downward-pointing arrow representing tighter monetary conditions.",
-    "link": "https://www.bls.gov/bls/"
-  },
-  {
-    "date": "2026-10-01",
     "headline": "Kashkari Cites Sticky Inflation Despite Softer PCE Print",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.cnbc.com/2026/09/30/watch-minneapolis-fed-president-neel-kashkari.html"
@@ -821,6 +815,13 @@
     "headline": "US Economy Adds 165,000 Jobs as Unemployment Slips to 4.1%",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States Department of Labor statistical employment data report alongside a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-06",
+    "headline": "Fed's Daly Warns of High Inflation and Rate Hike Risks",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a United States dollar banknote and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
     "alert": true
   }
 ]
