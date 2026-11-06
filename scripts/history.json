@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "headline": "Cooler PCE Inflation Data Drives Market Sentiment and Rate Bets",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single upward-pointing arrow representing supportive monetary conditions.",
-    "link": "https://finance.yahoo.com/video/cooler-pce-inflation-means-bitcoin-155442093.html?.tsrc=rss"
-  },
-  {
-    "date": "2026-10-01",
     "headline": "US Economic Data Highlights Inflation and Labor Market Metrics",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single downward-pointing arrow representing tighter monetary conditions.",
     "link": "https://www.bls.gov/bls/"
@@ -820,6 +814,13 @@
     "headline": "Bank of England Hikes Rates, Warns Inflation Near 5%",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Bank of England headquarters architectural facade alongside British pound banknotes, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.cnbc.com/2026/11/05/interest-rates-inflation-uk.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-06",
+    "headline": "US Economy Adds 165,000 Jobs as Unemployment Slips to 4.1%",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States Department of Labor statistical employment data report alongside a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html",
     "alert": true
   }
 ]
