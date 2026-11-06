@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "headline": "Kashkari Cites Sticky Inflation Despite Softer PCE Print",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a sideways-pointing arrow indicating mixed market conditions.",
-    "link": "https://www.cnbc.com/2026/09/30/watch-minneapolis-fed-president-neel-kashkari.html"
-  },
-  {
-    "date": "2026-10-01",
     "headline": "Crucial US Data Ahead for Gold Traders",
     "image_subject": "A collage featuring a wall calendar beside an alarm clock, plain gold bars with blank unmarked surfaces, the Federal Reserve building facade, and a dynamic zigzag line representing volatility.",
     "link": "calendar:2026-10-01"
@@ -822,6 +816,13 @@
     "headline": "Fed's Daly Warns of High Inflation and Rate Hike Risks",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a United States dollar banknote and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-06",
+    "headline": "Gold Hovers Above $4,000 Ahead of October Jobs Report",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States Department of Labor statistical employment data report alongside a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.cnbc.com/2026/11/05/october-jobs-report-preview.html",
     "alert": true
   }
 ]
