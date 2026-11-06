@@ -1,11 +1,11 @@
 [
   {
-    "headline": "Gold Hovers Above $4,000 Ahead of October Jobs Report",
-    "teaser": "Gold futures opened lower on Friday morning as market participants awaited the key nonfarm payrolls release. The upcoming employment figures are critical for shaping expectations around US monetary policy and bullion valuation.",
-    "headline_km": "មាសស្ថិតនៅเหนือតម្លៃ 4000 ដុល្លារអាមេរិក មុនពេលការចេញផ្សាយរបាយការណ៍ការងារ",
-    "teaser_km": "តម្លៃមាសបានធ្លាក់ចុះបន្តិចនៅក្នុងការជួញដូរពេលព្រឹក ខណៈអ្នកជួញដូររង់ចាំទិន្នរបាយការណ៍ការងារ។ ទិន្នន័យការងារនេះមានសារៈសំខាន់ខ្លាំងណាស់ក្នុងការកំណត់ទស្សនវិស័យអត្រាការប្រាក់របស់ធនាគារកណ្តាល។",
-    "impact": "mixed",
-    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-11-06-gold-hovers-above-4-000-ahead-of-october-jobs-report.html",
-    "image_path": "../docs/news/2026-11-06-gold-hovers-above-4-000-ahead-of-october-jobs-report.jpg"
+    "headline": "Average US Jobless Duration Hits Decade High in October",
+    "teaser": "The average duration of unemployment for jobless workers in the United States surpassed 27 weeks in October, reaching a decade high outside the pandemic. Prolonged joblessness suggests underlying labor market cooling, potentially limiting Federal Reserve rate hikes and supporting gold.",
+    "headline_km": "រយៈពេលគ្មានការងារធ្វើជាមធ្យមនៅអាមេរិកឈានដល់កម្រិតខ្ពស់បំផុតក្នុងរយៈពេល 10 ឆ្នាំ",
+    "teaser_km": "រយៈពេលជាមធ្យមនៃការគ្មានការងារធ្វើរបស់ពលករនៅសហរដ្ឋអាមេរិកបានកើនលើស 27 សប្តាហ៍នៅក្នុងខែតុលា ដែលជាកម្រិតខ្ពស់បំផុតក្នុងរយៈពេល 10 ឆ្នាំប្រសិនបើមិនរាប់បញ្ចូលដំណាក់កាលជំងឺរាតត្បាត។ ស្ថានភាពគ្មានការងារធ្វើដ៏យូរនេះបង្ហាញពីការធ្លាក់ចុះនៃទីផ្សារការងារ ដែលអាចបន្ទន់ការរំពឹងទុកលើគោលនយោបាយ Fed និងជួយគាំទ្រដល់មាស។",
+    "impact": "bullish",
+    "url": "https://e11lab-projects.github.io/market-code-telegram/news/2026-11-06-average-us-jobless-duration-hits-decade-high-in-october.html",
+    "image_path": "../docs/news/2026-11-06-average-us-jobless-duration-hits-decade-high-in-october.jpg"
   }
 ]
