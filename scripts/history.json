@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-02",
-    "headline": "Peak Rate Prospects Shift Focus Across Precious Metals",
-    "image_subject": "Plain gold bars with blank unmarked surfaces beside an industrial factory warehouse, accompanied by a single sideways-pointing arrow indicating mixed market conditions across precious metals.",
-    "link": "https://finance.yahoo.com/m/20a103d7-a6a3-32e8-8d51-7814a99e08f4/interest-rates-may-be.html?.tsrc=rss"
-  },
-  {
-    "date": "2026-10-02",
     "headline": "Gold Steadifies as Markets Await U.S. Jobs Data",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States financial bond market building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-stronger-dollar-higher-053651390.html?.tsrc=rss"
@@ -827,6 +821,13 @@
     "headline": "Hot Inflation and Fed Speeches Put Rate Hikes in Focus",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.marketwatch.com/story/hot-u-s-inflation-hasnt-cooled-off-rising-consumer-prices-to-keep-fed-rate-hike-on-track-926c44b0?mod=mw_rss_topstories",
+    "alert": true
+  },
+  {
+    "date": "2026-11-09",
+    "headline": "China October Wholesale Inflation Hits 5.7% as Consumer Measure Slows",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, an industrial factory complex with shipping cargo containers representing Chinese wholesale manufacturing, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.cnbc.com/2026/11/09/china-wholesale-inflation-rises-consumer.html",
     "alert": true
   }
 ]
