@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-02",
-    "headline": "Bond Yields Surge to 24-Year High as Stocks Edge Lower",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States financial bond market building facade, and a single downward-pointing arrow representing surging treasury yields.",
-    "link": "https://www.fool.com/coverage/stock-market-today/2026/10/01/stock-market-midday-oct-1-stocks-edge-lower-as-treasury-yields-surge-to-24-year-high/?.tsrc=rss"
-  },
-  {
-    "date": "2026-10-02",
     "headline": "US Employment Report Approaches: Key Volatility Ahead for Gold",
     "image_subject": "A collage illustration featuring a wall calendar, an alarm clock, plain gold bars with blank unmarked surfaces, a US dollar banknote, and a zigzag line showing volatility instead of an arrow.",
     "link": "calendar:2026-10-02"
@@ -824,6 +818,13 @@
     "headline": "Average US Jobless Duration Hits Decade High in October",
     "image_subject": "Plain gold bars with blank unmarked surfaces, an hourglass measuring time beside an official employment office building facade, and a single upward-pointing arrow indicating bullish market momentum.",
     "link": "https://www.cnbc.com/2026/11/06/long-term-unemployment-october-jobs-report.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-09",
+    "headline": "Gold Rebounds Above $4,120 Despite Looming Fed Tightening Bets",
+    "image_subject": "A trading terminal display showing abstract financial charts alongside plain gold bars with blank unmarked surfaces, accompanied by a single upward-pointing arrow indicating bullish market movement.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-rebounds-above-4-100-014644409.html?.tsrc=rss",
     "alert": true
   }
 ]
