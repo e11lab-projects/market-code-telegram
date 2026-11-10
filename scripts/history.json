@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-05",
-    "headline": "Key US Data and Fed Minutes Ahead for Gold Traders",
-    "image_subject": "A collage illustration featuring an alarm clock, plain gold bars with blank unmarked surfaces, the Federal Reserve building, and a sharp zigzag line showing market volatility without arrows.",
-    "link": "calendar:2026-10-05"
-  },
-  {
-    "date": "2026-10-05",
     "headline": "Gold Edges Higher as Labor Slowdown Offsets Elevated Yields",
     "image_subject": "Plain gold bars with blank unmarked surfaces, an offshore oil drilling rig, and a single sideways-pointing arrow indicating mixed market pressures.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-edges-higher-weekly-slide-014610629.html?.tsrc=rss"
@@ -832,6 +826,13 @@
     "headline": "Hot US October CPI Rise Complicates Federal Reserve Policy",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.bls.gov/bls/",
+    "alert": true
+  },
+  {
+    "date": "2026-11-10",
+    "headline": "Fed Governor Waller Flags December Rate Hike and Bigger Move",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a United States dollar banknote and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
     "alert": true
   }
 ]
