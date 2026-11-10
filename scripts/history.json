@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-03",
-    "headline": "Gold Futures Erase Jobs Gains, Sinking Lower Intraday",
-    "image_subject": "Plain gold bars with blank unmarked surfaces beside a financial market computer trading terminal, and a single downward-pointing arrow representing sinking prices.",
-    "link": "https://finance.yahoo.com/m/b5bacc7b-ad07-3515-8898-f9a5b32ea065/gold-futures-erase-jobs.html?.tsrc=rss"
-  },
-  {
     "date": "2026-10-05",
     "headline": "Key US Data and Fed Minutes Ahead for Gold Traders",
     "image_subject": "A collage illustration featuring an alarm clock, plain gold bars with blank unmarked surfaces, the Federal Reserve building, and a sharp zigzag line showing market volatility without arrows.",
@@ -831,6 +825,13 @@
     "headline": "Hot US October CPI Rise Complicates Federal Reserve Policy",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-10",
+    "headline": "Hot US October CPI Rise Complicates Federal Reserve Policy",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.bls.gov/bls/",
     "alert": true
   }
 ]
