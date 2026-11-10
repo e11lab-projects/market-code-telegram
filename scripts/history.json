@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-02",
-    "headline": "Gold Jumps as Soft Jobs Report Cools Fed Rate Bets",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single upward-pointing arrow representing supportive monetary conditions.",
-    "link": "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html"
-  },
-  {
     "date": "2026-10-03",
     "headline": "Gold Futures Erase Jobs Gains, Sinking Lower Intraday",
     "image_subject": "Plain gold bars with blank unmarked surfaces beside a financial market computer trading terminal, and a single downward-pointing arrow representing sinking prices.",
@@ -830,6 +824,13 @@
     "headline": "Gold Slips as Investors Await U.S. Inflation Data",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside an economic price index ledger, and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-holds-near-4-130-014229117.html?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-10",
+    "headline": "Hot US October CPI Rise Complicates Federal Reserve Policy",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html",
     "alert": true
   }
 ]
