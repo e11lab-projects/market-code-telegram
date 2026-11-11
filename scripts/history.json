@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-05",
-    "headline": "Gold Edges Higher as Labor Slowdown Offsets Elevated Yields",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, an offshore oil drilling rig, and a single sideways-pointing arrow indicating mixed market pressures.",
-    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-edges-higher-weekly-slide-014610629.html?.tsrc=rss"
-  },
-  {
-    "date": "2026-10-05",
     "headline": "Gold Edges Higher as Markets Weigh Labor Data and Yields",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-edges-higher-markets-weigh-004108434.html?.tsrc=rss",
@@ -833,6 +827,13 @@
     "headline": "Fed Governor Waller Flags December Rate Hike and Bigger Move",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a United States dollar banknote and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-11",
+    "headline": "Gold Steadies Above $4,040 as Fed Tightening Bets Rise",
+    "image_subject": "Plain gold bars with blank unmarked surfaces beside a massive bank vault steel door and a single horizontal sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-near-4-035-012746424.html?.tsrc=rss",
     "alert": true
   }
 ]
