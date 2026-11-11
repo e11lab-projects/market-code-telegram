@@ -1,13 +1,6 @@
 [
   {
     "date": "2026-10-05",
-    "headline": "Wall Street Strategists Turn to Cross-Asset Hedges Amid Yield Surge",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States financial bond market building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
-    "link": "https://finance.yahoo.com/markets/options/articles/wall-street-strategists-steer-investors-140000412.html?.tsrc=rss",
-    "alert": true
-  },
-  {
-    "date": "2026-10-05",
     "headline": "Spot Gold Rises as October Fed Rate Hike Odds Wane",
     "image_subject": "Plain gold bars with blank unmarked surfaces beside a stylized monetary policy percentage symbol sculpture, and a single upward-pointing arrow representing rising market value.",
     "link": "https://qz.com/gold-prices-rise-september-jobs-report-fed-rate-hike-100526?.tsrc=rss",
@@ -834,6 +827,13 @@
     "headline": "Russia-Ukraine Security Talks Conclude in Abu Dhabi Without Breakthrough",
     "image_subject": "Plain gold bars with blank unmarked surfaces beside a diplomatic negotiation table and international treaties, accompanied by a single upward-pointing arrow indicating bullish safe-haven momentum.",
     "link": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o?at_medium=RSS&at_campaign=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-11",
+    "headline": "Fed Official Goolsbee Calls October Inflation Report Disturbing",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
     "alert": true
   }
 ]
