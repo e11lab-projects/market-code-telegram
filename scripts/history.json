@@ -1,13 +1,6 @@
 [
   {
     "date": "2026-10-05",
-    "headline": "Spot Gold Rises as October Fed Rate Hike Odds Wane",
-    "image_subject": "Plain gold bars with blank unmarked surfaces beside a stylized monetary policy percentage symbol sculpture, and a single upward-pointing arrow representing rising market value.",
-    "link": "https://qz.com/gold-prices-rise-september-jobs-report-fed-rate-hike-100526?.tsrc=rss",
-    "alert": true
-  },
-  {
-    "date": "2026-10-05",
     "headline": "Nasdaq Hits Highs as Wall Street Splits and Yields Creep",
     "image_subject": "A collage illustration featuring plain gold bars with blank unmarked surfaces, the Nasdaq stock exchange building facade, and a single upward-pointing arrow representing rising market value.",
     "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-hits-fresh-highs-while-182800216.html?.tsrc=rss",
@@ -834,6 +827,13 @@
     "headline": "Fed Official Goolsbee Calls October Inflation Report Disturbing",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
+    "alert": true
+  },
+  {
+    "date": "2026-11-12",
+    "headline": "Gold Slips Below USD 4,000 Amid Hawkish Fed Expectations",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a United States dollar banknote and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-clings-below-4-000-014114232.html?.tsrc=rss",
     "alert": true
   }
 ]
