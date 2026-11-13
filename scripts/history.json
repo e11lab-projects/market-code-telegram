@@ -1,13 +1,6 @@
 [
   {
     "date": "2026-10-06",
-    "headline": "Inflation Concerns and Government Policy Shape Market Sentiment",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a global macroeconomic data chart symbol sculpture, and a single sideways-pointing arrow indicating mixed market conditions.",
-    "link": "https://finance.yahoo.com/markets/stocks/articles/gold-price-volatility-drives-short-124018633.html?.tsrc=rss",
-    "alert": true
-  },
-  {
-    "date": "2026-10-06",
     "headline": "Energy Shock and Yield Surge Weigh on Mining Stocks",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single downward-pointing arrow representing sinking prices.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/energy-shock-wipes-264-billion-140000364.html?.tsrc=rss",
@@ -834,6 +827,13 @@
     "headline": "Treasury Yields Hit 5% Amid Nvidia Turmoil and Market Stress",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Department of the Treasury building facade alongside a digital stock market volatility chart, and a single horizontal sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://www.fool.com/coverage/stock-market-today/2026/11/13/stock-market-midday-nov-13-nasdaq-plunges-as-nvidia-turmoil-deepens-and-treasury-yields-hit-5/?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-13",
+    "headline": "Strong Dollar and Rate Hike Expectations Pressure Gold Prices",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States dollar banknote alongside a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/strong-dollar-rate-hike-bets-213244314.html?.tsrc=rss",
     "alert": true
   }
 ]
