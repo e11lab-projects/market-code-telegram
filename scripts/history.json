@@ -1,13 +1,6 @@
 [
   {
     "date": "2026-10-06",
-    "headline": "Gold Edges Higher as Global Conditions and Inflation Weigh",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a global macroeconomic data chart symbol sculpture, and a single upward-pointing arrow representing supportive market conditions.",
-    "link": "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-tuesday-october-6-2026-gold-edges-higher-as-investors-monitor-domestic-and-global-conditions-111213149.html?.tsrc=rss",
-    "alert": false
-  },
-  {
-    "date": "2026-10-06",
     "headline": "Inflation Concerns and Government Policy Shape Market Sentiment",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a global macroeconomic data chart symbol sculpture, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/stocks/articles/gold-price-volatility-drives-short-124018633.html?.tsrc=rss",
@@ -835,5 +828,12 @@
     "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Department of the Treasury building facade alongside a United States dollar banknote, and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-friday-november-13-2026-golds-down-over-4-in-the-last-five-days-123841151.html?.tsrc=rss",
     "alert": false
+  },
+  {
+    "date": "2026-11-13",
+    "headline": "Treasury Yields Hit 5% Amid Nvidia Turmoil and Market Stress",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Department of the Treasury building facade alongside a digital stock market volatility chart, and a single horizontal sideways-pointing arrow indicating mixed market conditions.",
+    "link": "https://www.fool.com/coverage/stock-market-today/2026/11/13/stock-market-midday-nov-13-nasdaq-plunges-as-nvidia-turmoil-deepens-and-treasury-yields-hit-5/?.tsrc=rss",
+    "alert": true
   }
 ]
