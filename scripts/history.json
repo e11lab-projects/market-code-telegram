@@ -1,13 +1,6 @@
 [
   {
     "date": "2026-10-06",
-    "headline": "Gold Holds Near USD 4,140 as Dollar and Yields Offset Fed Rate Outlook",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
-    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-holds-near-4-140-012306866.html?.tsrc=rss",
-    "alert": true
-  },
-  {
-    "date": "2026-10-06",
     "headline": "Gold Steadies as Strong Dollar and Yields Weigh",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-steadies-stronger-dollar-yields-233914209.html?.tsrc=rss",
@@ -834,6 +827,13 @@
     "headline": "Gold Rebounds Above $3,900 as Weekly Losses Persist",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Department of the Treasury building facade alongside a United States dollar banknote, and a single upward-pointing arrow indicating a rebound in market price.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-languishes-near-13-month-013344008.html?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-13",
+    "headline": "Gold Slides As Inflation Concerns And Rate Hike Fears Grow",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a consumer price index statistical inflation report document, and a single downward-pointing arrow indicating bearish market pressure.",
+    "link": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
     "alert": true
   }
 ]
