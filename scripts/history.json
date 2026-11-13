@@ -1,12 +1,5 @@
 [
   {
-    "date": "2026-10-05",
-    "headline": "SEC Clears Leveraged Crypto and Precious Metals Exchange Funds",
-    "image_subject": "Plain gold bars with blank unmarked surfaces, a stock exchange financial building facade, and a single sideways-pointing arrow indicating mixed market conditions.",
-    "link": "https://decrypt.co/380108/sec-clears-3x-leveraged-bitcoin-ethereum-funds?.tsrc=rss",
-    "alert": true
-  },
-  {
     "date": "2026-10-06",
     "headline": "Gold Holds Near USD 4,140 as Dollar and Yields Offset Fed Rate Outlook",
     "image_subject": "Plain gold bars with blank unmarked surfaces, a United States federal reserve monetary policy building, and a single sideways-pointing arrow indicating mixed market conditions.",
@@ -834,6 +827,13 @@
     "headline": "Gold Prices Plunge as Fed Rate Hike Fears Intensify",
     "image_subject": "Plain gold bars with blank unmarked surfaces, the Federal Reserve building facade alongside a United States dollar banknote, and a single downward-pointing arrow indicating bearish market pressure.",
     "link": "https://finance.yahoo.com/markets/commodities/articles/gold-prices-plunge-fed-rate-194427220.html?.tsrc=rss",
+    "alert": true
+  },
+  {
+    "date": "2026-11-13",
+    "headline": "Gold Rebounds Above $3,900 as Weekly Losses Persist",
+    "image_subject": "Plain gold bars with blank unmarked surfaces, the United States Department of the Treasury building facade alongside a United States dollar banknote, and a single upward-pointing arrow indicating a rebound in market price.",
+    "link": "https://finance.yahoo.com/markets/commodities/articles/gold-languishes-near-13-month-013344008.html?.tsrc=rss",
     "alert": true
   }
 ]
